@@ -260,6 +260,10 @@ body .tag-color.comment {
     opacity: 1;
     pointer-events: auto;
   }
+  /* Prevent body scroll when menu is open */
+  body.menu-open {
+    overflow: hidden;
+  }
 }
 /* Copyright Section */
 .copyright-section {

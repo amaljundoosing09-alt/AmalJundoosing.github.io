@@ -838,6 +838,7 @@
       mobileMenuToggle.classList.toggle('active');
       mainContainer.classList.toggle('menu-open');
       rightWrapper.classList.toggle('active');
+      document.body.classList.toggle('menu-open');
     });
 
     // Close menu when clicking on overlay or a link
@@ -848,6 +849,7 @@
             mobileMenuToggle.classList.remove('active');
             mainContainer.classList.remove('menu-open');
             rightWrapper.classList.remove('active');
+            document.body.classList.remove('menu-open');
           }
         }
       }
@@ -859,6 +861,7 @@
         mobileMenuToggle.classList.remove('active');
         mainContainer.classList.remove('menu-open');
         rightWrapper.classList.remove('active');
+        document.body.classList.remove('menu-open');
       }
     });
   </script>
