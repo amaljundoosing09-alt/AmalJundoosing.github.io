@@ -139,6 +139,7 @@ body .func-wrapper .inside-boday-wrapper {
   padding-left: 25px;
 }
 body .mission-statement-section {
+  font-family: "Courier New", Courier, monospace;
   margin-top: 3rem;
 }
 body .mission-statement-section .txt {
