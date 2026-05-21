@@ -1,0 +1,303 @@
+@use "variables" as *;
+
+/* Meyerweb Reset snippet (truncated for brevity) */
+html,
+body,
+div,
+span,
+h1,
+h2,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+body {
+  background-color: $Background;
+  color: $Foreground;
+
+  ::selection {
+    background-color: $SelectionBackground;
+    color: $Foreground;
+  }
+
+  .main-container {
+    display: flex;
+    flex-direction: row;
+
+    .right-wrapper {
+      position: relative;
+      width: 100%;
+      flex: 0;
+      padding-left: 3rem;
+
+      .img-wrapper {
+        position: relative;
+        width: 100%;
+
+        .placeholder-image {
+          width: 200px;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    .left-wrapper {
+      position: relative;
+      width: 100%;
+      flex: 1;
+      padding-left: 3.5rem;
+      .top-header-section {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 6px;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .func-wrapper {
+    position: relative;
+    width: 100%;
+    gap: 6px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.9rem;
+    p {
+      margin: 0;
+    }
+
+    .headFunction {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      gap: 6px;
+      p {
+        margin-bottom: 5px;
+      }
+    }
+
+    .bodyFunction {
+      position: relative;
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      gap: 6px;
+      p {
+        margin: 0;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 0.9rem;
+        list-style: none;
+        padding-left: 25px;
+
+        li {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+        }
+      }
+      .mainbody-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        padding-left: 25px;
+      }
+      .variable-wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+        padding-left: 25px;
+      }
+    }
+
+    .inside-boday-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding-left: 25px;
+    }
+  }
+  .mission-statement-section {
+    margin-top: 3rem;
+    .txt {
+      text-align: center;
+    }
+  }
+  .padding-bottom-25 {
+    padding-bottom: 25px;
+  }
+
+  .comment {
+    line-height: 1.3rem;
+  }
+
+  .tag-color {
+    &.cyan {
+      color: $Cyan;
+    }
+
+    &.green {
+      color: $Green;
+    }
+
+    &.orange {
+      color: $Orange;
+    }
+
+    &.pink {
+      color: $Pink;
+    }
+
+    &.purple {
+      color: $Purple;
+    }
+
+    &.red {
+      color: $Red;
+    }
+
+    &.white {
+      color: $Foreground;
+    }
+    &.comment {
+      color: $Comment;
+    }
+  }
+}
+
+/* Mobile Menu Toggle Button Styles */
+.mobile-menu-toggle {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1001;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0;
+
+  span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: $Pink;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  &.active span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+  }
+
+  &.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  &.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+  /* Show hamburger menu on mobile */
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  body .main-container {
+    flex-direction: column;
+    position: relative;
+
+    .right-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 80vw;
+      max-width: 400px;
+      height: 100vh;
+      background-color: $Background;
+      z-index: 1000;
+      padding-left: 1.5rem;
+      padding-top: 4rem;
+      overflow-y: auto;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+
+      &.active {
+        transform: translateX(0);
+      }
+    }
+
+    .left-wrapper {
+      width: 100%;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      padding-top: 1rem;
+    }
+
+    &::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    &.menu-open::before {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+}
+
+/* Copyright Section */
+.copyright-section {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border-top: 1px solid $Comment;
+  margin-top: 3rem;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.85rem;
+}

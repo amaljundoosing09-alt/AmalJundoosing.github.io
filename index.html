@@ -1,0 +1,867 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="./css/style.min.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'>
+  <defs>
+    <linearGradient id='g' x1='0' y1='0' x2='1' y2='1'>
+      <stop offset='0%' stop-color='%2306b6d4'/>
+      <stop offset='100%' stop-color='%233b82f6'/>
+    </linearGradient>
+
+    <filter id='glow'>
+      <feGaussianBlur stdDeviation='1.6' result='blur'/>
+      <feMerge>
+        <feMergeNode in='blur'/>
+        <feMergeNode in='SourceGraphic'/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width='64' height='64' rx='14' fill='%230b1220'/>
+
+  <text x='50%' y='58%' text-anchor='middle'
+        font-size='26'
+        font-family='Arial Black, Arial'
+        font-weight='bold'
+        fill='url(%23g)'
+        filter='url(%23glow)'>
+    LJ
+  </text>
+</svg>">
+</head>
+
+<body>
+  <!-- Mobile Menu Toggle Button -->
+  <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <main class="main-container" id="main-container">
+    <!-- Right Column: Skills, Tools & Personal Info -->
+    <div class="right-wrapper">
+      <!-- Profile Image -->
+      <div class="img-wrapper">
+        <p class="tag-color cyan">&lt;img&gt;</p>
+        <img src="./img/ea50fd5ac033ccb1ab19a9aa4f1135464bbc1399.png" alt="placeholder image"
+          class="placeholder-image" />
+        <p class="tag-color cyan">&lt;/img&gt;</p>
+      </div>
+
+      <!-- Technical Skills & Competencies -->
+      <div class="platform-wrapper">
+        <!-- Platforms & Operating Systems -->
+        <div class="func-wrapper">
+          <div class="headFunction">
+            <p class="tag-color cyan">public</p>
+            <p class="tag-color cyan">enum</p>
+            <p class="tag-color pink">PLATFORMES()</p>
+          </div>
+          <div class="bodyFunction">
+            <p>{</p>
+            <ul>
+              <li class="tag-color white">Windows,</li>
+              <li class="tag-color white">Linux,</li>
+              <li class="tag-color white">Mac,</li>
+              <li class="tag-color white">Mobile,</li>
+            </ul>
+            <p>}</p>
+          </div>
+        </div>
+
+        <!-- Programming Languages & Frameworks -->
+        <div class="func-wrapper">
+          <div class="headFunction">
+            <p class="tag-color cyan">public</p>
+            <p class="tag-color cyan">enum</p>
+            <p class="tag-color pink">LANGAGES()</p>
+          </div>
+          <div class="bodyFunction">
+            <p>{</p>
+            <p class="mainbody-wrapper tag-color white">
+              HTML, CSS, SCSS, JavaScript, TypeScript, React, Node.js, .NET
+              Framework, Express.js, PHP
+            </p>
+            <p>}</p>
+          </div>
+        </div>
+
+        <!-- Development & Design Tools -->
+        <div class="func-wrapper">
+          <div class="headFunction">
+            <p class="tag-color cyan">public</p>
+            <p class="tag-color cyan">enum</p>
+            <p class="tag-color pink">TOOLS()</p>
+          </div>
+          <div class="bodyFunction">
+            <p>{</p>
+            <p class="mainbody-wrapper tag-color white">
+              Photoshop, Figma, Visual Studio Code, GitHub, Git, CI/CD (GitHub
+              Actions), GitLab, Jira, Confluence, Xray, Postman, MySQL,
+              MongoDB, Docker,CMS Platforms (WordPress, Drupal, Shopify,
+              Salesforce)
+            </p>
+            <p>}</p>
+          </div>
+        </div>
+
+        <!-- Project Management & Delivery Competencies -->
+        <div class="func-wrapper">
+          <div class="headFunction">
+            <p class="tag-color cyan">public</p>
+            <p class="tag-color cyan">enum</p>
+            <p class="tag-color pink">PROJECT MANAGEMENT COMPETENCIES()</p>
+          </div>
+          <div class="bodyFunction">
+            <p>{</p>
+            <p class="mainbody-wrapper tag-color white">
+              Project Management Skills, Project Leadership, Delivery
+              Management, Agile Delivery, Technical Project Leadership ,
+              Program & Delivery Skills, Project & Team Leadership, Delivery &
+              Operations, Agile Project Management, Management Expertise ,
+              Leadership & Delivery, Delivery Excellence
+            </p>
+            <p>}</p>
+          </div>
+        </div>
+
+        <!-- Language Proficiency -->
+        <div class="func-wrapper">
+          <div class="headFunction">
+            <p class="tag-color cyan">public</p>
+            <p class="tag-color cyan">enum</p>
+            <p class="tag-color pink">LANGUAGES()</p>
+          </div>
+          <div class="bodyFunction">
+            <p>{</p>
+            <ul>
+              <li class="tag-color white">
+                <span class="tag-color comment">//Fluent</span>
+                English = C1
+              </li>
+              <li class="tag-color white">
+                <span class="tag-color comment">//Fluent</span>
+                French = B2
+              </li>
+              <li class="tag-color white">
+                <span class="tag-color comment">//Native</span>
+                Creole = B1
+              </li>
+            </ul>
+            <p>}</p>
+          </div>
+        </div>
+
+        <!-- Core Strengths & Competencies -->
+        <div class="func-wrapper">
+          <div class="headFunction">
+            <p class="tag-color cyan">public</p>
+            <p class="tag-color cyan">enum</p>
+            <p class="tag-color pink">STRENGTHS()</p>
+          </div>
+          <div class="bodyFunction">
+            <p>{</p>
+            <p>
+              Leadership & Decision-Making, Stakeholder Communication, Strategic & Analytical Thinking, Multi-Project
+              Management, Results-Driven Mindset, Continuous Learning & Growth
+            </p>
+            <p>}</p>
+          </div>
+        </div>
+
+        <!-- Personal Interests & Hobbies -->
+        <div class="func-wrapper">
+          <div class="headFunction">
+            <p class="tag-color cyan">public</p>
+            <p class="tag-color cyan">enum</p>
+            <p class="tag-color pink">INTERESTS()</p>
+          </div>
+          <div class="bodyFunction">
+            <p>{</p>
+            <p>
+              Guitar, Basketball, Fishing, Photography, Reading, Traveling
+            </p>
+            <p>}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="left-wrapper">
+      <!-- Professional Summary -->
+      <div class="top-header-section">
+        <p class="tag-color comment">/*</p>
+        <span class="tag-color comment"> &lt;summary&gt;</span>
+        <p class="tag-color comment">
+          MBA-qualified Project Management professional with expertise in
+          Agile delivery, technical leadership, and cross-functional team
+          coordination. Experienced in Scrum facilitation, workflow
+          optimization, risk management, and aligning business goals with
+          engineering execution to deliver efficient and predictable project
+          outcomes.
+        </p>
+        <span class="tag-color comment"> &lt;/summary&gt;</span>
+        <p class="tag-color comment">*/</p>
+      </div>
+      <div class="main-boday-section">
+        <!-- Contact Information -->
+        <div class="func-wrapper padding-bottom-25">
+          <div class="headFunction">
+            <p class="tag-color cyan">public</p>
+            <p class="tag-color cyan">Class</p>
+            <p class="tag-color pink">Information()</p>
+          </div>
+          <div class="bodyFunction">
+            <p>{</p>
+            <div class="variable-wrapper">
+              <p class="tag-color cyan">public</p>
+              <p class="tag-color cyan">string</p>
+              <p class="tag-color white">Name</p>
+              <p class="tag-color white">=</p>
+              <p class="tag-color orange">'Leeladharsing Jundoosing';</p>
+            </div>
+
+            <div class="variable-wrapper">
+              <p class="tag-color cyan">public</p>
+              <p class="tag-color cyan">string</p>
+              <p class="tag-color white">Phone Number</p>
+              <p class="tag-color white">=</p>
+              <p class="tag-color orange">'+230 5824-8885';</p>
+            </div>
+
+            <div class="variable-wrapper">
+              <p class="tag-color cyan">public</p>
+              <p class="tag-color cyan">string</p>
+              <p class="tag-color white">Email</p>
+              <p class="tag-color white">=</p>
+              <p class="tag-color orange">'jundoosing@gmail.com';</p>
+            </div>
+
+            <div class="variable-wrapper">
+              <p class="tag-color cyan">public</p>
+              <p class="tag-color cyan">
+                string <span class="tag-color white">[]</span>
+              </p>
+              <p class="tag-color white">Address</p>
+              <p class="tag-color white">=</p>
+              <p class="tag-color orange">
+                <span class="tag-color white">{</span>'B.Plan Rd,
+                Bougainvilliers Lane, Calebasses'<span class="tag-color white">};</span>
+              </p>
+            </div>
+            <p>}</p>
+          </div>
+        </div>
+
+        <!-- Professional Experience & Employment History -->
+        <div class="func-wrapper padding-bottom-25">
+          <div class="headFunction">
+            <p class="tag-color cyan">public</p>
+            <p class="tag-color cyan">Class</p>
+            <p class="tag-color pink">Experience()</p>
+          </div>
+          <p>{</p>
+          <div class="bodyFunction padding-bottom-25">
+            <div class="inside-boday-wrapper">
+              <div class="headFunction">
+                <p class="tag-color cyan">public</p>
+                <p class="tag-color cyan">void</p>
+                <p class="tag-color pink">
+                  Ipedis<span class="tag-color white">()</span>
+                </p>
+              </div>
+              <p>{</p>
+              <div class="variable-wrapper">
+                <p class="tag-color cyan">var</p>
+                <p class="tag-color white">_Duration</p>
+                <p class="tag-color white">=</p>
+                <p class="tag-color green">
+                  &nbsp;Rage
+                  <span class="tag-color white">( <strong>StartDate</strong>: Apr 2026 ,
+                    <strong>EndDate</strong>: Current )</span>
+                </p>
+              </div>
+              <div class="variable-wrapper">
+                <p class="tag-color cyan">var</p>
+                <p class="tag-color white">_Title</p>
+                <p class="tag-color white">=</p>
+                <p class="tag-color purple">
+                  <span class="tag-color cyan"> &nbsp;new </span>Accessibility
+                  Consultant
+                </p>
+              </div>
+              <div class="mainbody-wrapper">
+                <p class="tag-color comment">/*</p>
+                <p class="tag-color comment">
+                  <strong>Accessibility professional </strong> experienced in
+                  leading WCAG compliance initiatives, conducting
+                  accessibility audits, and improving usability across web
+                  applications. Skilled in accessibility consulting,
+                  stakeholder collaboration, semantic HTML review, keyboard
+                  navigation, screen reader compatibility, and translating
+                  business requirements into inclusive, user-friendly
+                  solutions.
+                </p>
+                <p class="tag-color comment">*/</p>
+              </div>
+              <p>}</p>
+            </div>
+          </div>
+          <!-- dayforce software developer -->
+          <div class="bodyFunction padding-bottom-25">
+            <div class="inside-boday-wrapper">
+              <div class="headFunction">
+                <p class="tag-color cyan">public</p>
+                <p class="tag-color cyan">void</p>
+                <p class="tag-color pink">
+                  Dayforce<span class="tag-color white">()</span>
+                </p>
+              </div>
+              <p>{</p>
+
+              <div class="variable-wrapper">
+                <p class="tag-color cyan">var</p>
+                <p class="tag-color white">_Duration</p>
+                <p class="tag-color white">=</p>
+                <p class="tag-color green">
+                  &nbsp;Rage
+                  <span class="tag-color white">( <strong>StartDate</strong>: Nov 2024 ,
+                    <strong>EndDate</strong>: Feb 2026 )</span>
+                </p>
+              </div>
+
+              <div class="variable-wrapper">
+                <p class="tag-color cyan">var</p>
+                <p class="tag-color white">_Title</p>
+                <p class="tag-color white">=</p>
+                <p class="tag-color purple">
+                  <span class="tag-color cyan"> &nbsp;new </span>Software Developer III
+                </p>
+              </div>
+
+              <div class="mainbody-wrapper">
+                <p class="tag-color comment">/*</p>
+                <p class="tag-color comment">
+                  <strong>Full-stack developer</strong> with experienced in building scalable web applications with
+                  HTML, CSS,
+                  TypeScript, .NET, and React.js. Skilled in Agile delivery, Scrum facilitation, CI/CD automation,
+                  backlog refinement,
+                  technical risk management, and cross-functional collaboration. Strong background in stakeholder
+                  communication, accessibility
+                  compliance, workflow optimization, and aligning engineering execution with business objectives.
+                </p>
+                <p class="tag-color comment">*/</p>
+              </div>
+              <p>}</p>
+            </div>
+          </div>
+
+          <!-- dayforce software developer in test -->
+          <div class="bodyFunction padding-bottom-25">
+            <div class="inside-boday-wrapper">
+              <div class="headFunction">
+                <p class="tag-color cyan">public</p>
+                <p class="tag-color cyan">void</p>
+                <p class="tag-color pink">
+                  Dayforce<span class="tag-color white">()</span>
+                </p>
+              </div>
+              <p>{</p>
+
+              <div class="variable-wrapper">
+                <p class="tag-color cyan">var</p>
+                <p class="tag-color white">_Duration</p>
+                <p class="tag-color white">=</p>
+                <p class="tag-color green">
+                  &nbsp;Rage
+                  <span class="tag-color white">( <strong>StartDate</strong>: Sep 2023 ,
+                    <strong>EndDate</strong>: Nov 2024 )</span>
+                </p>
+              </div>
+
+              <div class="variable-wrapper">
+                <p class="tag-color cyan">var</p>
+                <p class="tag-color white">_Title</p>
+                <p class="tag-color white">=</p>
+                <p class="tag-color purple">
+                  <span class="tag-color cyan"> &nbsp;new Software Engineer in Test</span>
+                </p>
+              </div>
+
+              <div class="mainbody-wrapper">
+                <p class="tag-color comment">/*</p>
+                <p class="tag-color comment">
+                  <strong>QA Automation Engineer</strong> with experience in SpecFlow, FitNesse, and C# (.NET) test
+                  automation.
+                  Skilled in manual and automated testing for React-based applications, collaborating with development
+                  teams,
+                  and supporting reliable Agile release cycles.
+                </p>
+                <p class="tag-color comment">*/</p>
+              </div>
+              <p>}</p>
+            </div>
+          </div>
+
+
+          <!-- Ambrex Ltd WebMaster-->
+          <div class="bodyFunction padding-bottom-25">
+            <div class="inside-boday-wrapper">
+              <div class="headFunction">
+                <p class="tag-color cyan">public</p>
+                <p class="tag-color cyan">void</p>
+                <p class="tag-color pink">
+                  Ambrex Ltd<span class="tag-color white">()</span>
+                </p>
+              </div>
+              <p>{</p>
+
+              <div class="variable-wrapper">
+                <p class="tag-color cyan">var</p>
+                <p class="tag-color white">_Duration</p>
+                <p class="tag-color white">=</p>
+                <p class="tag-color green">
+                  &nbsp;Rage
+                  <span class="tag-color white">( <strong>StartDate</strong>: Jul 2023 ,
+                    <strong>EndDate</strong>: Sep 2023 )</span>
+                </p>
+              </div>
+
+              <div class="variable-wrapper">
+                <p class="tag-color cyan">var</p>
+                <p class="tag-color white">_Title</p>
+                <p class="tag-color white">=</p>
+                <p class="tag-color purple">
+                  <span class="tag-color cyan"> &nbsp;new Webmaster / Developer</span>
+                </p>
+              </div>
+
+              <div class="mainbody-wrapper">
+                <p class="tag-color comment">/*</p>
+                <p class="tag-color comment">
+                  <strong>E-commerce specialist</strong> experienced in managing and optimizing Shopify websites using
+                  PageFly.
+                  Skilled in conversion-focused upsell and cross-sell strategies, visual design, and Adobe Photoshop
+                  content optimization.
+                </p>
+                <p class="tag-color comment">*/</p>
+              </div>
+              <p>}</p>
+            </div>
+          </div>
+
+
+          <!-- Total Tester -->
+          <div class="bodyFunction padding-bottom-25">
+            <div class="inside-boday-wrapper">
+              <div class="headFunction">
+                <p class="tag-color cyan">public</p>
+                <p class="tag-color cyan">void</p>
+                <p class="tag-color pink">
+                  Total Energies<span class="tag-color white">()</span>
+                </p>
+              </div>
+              <p>{</p>
+
+              <div class="variable-wrapper">
+                <p class="tag-color cyan">var</p>
+                <p class="tag-color white">_Duration</p>
+                <p class="tag-color white">=</p>
+                <p class="tag-color green">
+                  &nbsp;Rage
+                  <span class="tag-color white">( <strong>StartDate</strong>: Jan 2023 ,
+                    <strong>EndDate</strong>: Jul 2023 )</span>
+                </p>
+              </div>
+
+              <div class="variable-wrapper">
+                <p class="tag-color cyan">var</p>
+                <p class="tag-color white">_Title</p>
+                <p class="tag-color white">=</p>
+                <p class="tag-color purple">
+                  <span class="tag-color cyan"> &nbsp;Tester</span>
+                </p>
+              </div>
+
+              <div class="mainbody-wrapper">
+                <p class="tag-color comment">/*</p>
+                <p class="tag-color comment">
+                  <strong>QA Analyst</strong> experienced in manual testing, defect tracking with Jira Xray, and Agile
+                  collaboration.
+                  Skilled in user story refinement, feature validation, and maintaining clear project documentation in
+                  Confluence.
+                </p>
+                <p class="tag-color comment">*/</p>
+              </div>
+              <p>}</p>
+            </div>
+          </div>
+
+          <!-- Prodigious Front end Developer -->
+          <div class="bodyFunction padding-bottom-25">
+            <div class="inside-boday-wrapper">
+              <div class="headFunction">
+                <p class="tag-color cyan">public</p>
+                <p class="tag-color cyan">void</p>
+                <p class="tag-color pink">
+                  Prodigious Brand Logistic<span class="tag-color white">()</span>
+                </p>
+              </div>
+              <p>{</p>
+
+              <div class="variable-wrapper">
+                <p class="tag-color cyan">var</p>
+                <p class="tag-color white">_Duration</p>
+                <p class="tag-color white">=</p>
+                <p class="tag-color green">
+                  &nbsp;Rage
+                  <span class="tag-color white">( <strong>StartDate</strong>: Nov 2016 ,
+                    <strong>EndDate</strong>: Dec 2024 )</span>
+                </p>
+              </div>
+
+              <div class="variable-wrapper">
+                <p class="tag-color cyan">var</p>
+                <p class="tag-color white">_Title</p>
+                <p class="tag-color white">=</p>
+                <p class="tag-color purple">
+                  <span class="tag-color cyan"> &nbsp;Front-End Engineer</span>
+                </p>
+              </div>
+
+              <div class="mainbody-wrapper">
+                <p class="tag-color comment">/*</p>
+                <p class="tag-color comment">
+                  <strong>Front-End Engineer</strong> experienced in building responsive web applications using HTML,
+                  CSS, Sass, JavaScript, React.js, Node.js,
+                  and Tailwind CSS. Skilled in Shopify development, CMS integrations, SEO optimization, client
+                  communication, and delivering scalable digital solutions across platforms including WordPress, Drupal,
+                  Symfony, Typo3, and Salesforce Page Designer.
+                </p>
+                <p class="tag-color comment">*/</p>
+              </div>
+              <p>}</p>
+            </div>
+          </div>
+
+          <!-- Trainee Android Developer Jini Guru Mauritius -->
+          <div class="bodyFunction padding-bottom-25">
+            <div class="inside-boday-wrapper">
+              <div class="headFunction">
+                <p class="tag-color cyan">public</p>
+                <p class="tag-color cyan">void</p>
+                <p class="tag-color pink">
+                  Jini Guru Mauritius Ltd<span class="tag-color white">()</span>
+                </p>
+              </div>
+              <p>{</p>
+
+              <div class="variable-wrapper">
+                <p class="tag-color cyan">var</p>
+                <p class="tag-color white">_Duration</p>
+                <p class="tag-color white">=</p>
+                <p class="tag-color green">
+                  &nbsp;Rage
+                  <span class="tag-color white">( <strong>StartDate</strong>: Nov 2015 ,
+                    <strong>EndDate</strong>: Nov 2016 )</span>
+                </p>
+              </div>
+
+              <div class="variable-wrapper">
+                <p class="tag-color cyan">var</p>
+                <p class="tag-color white">_Title</p>
+                <p class="tag-color white">=</p>
+                <p class="tag-color purple">
+                  <span class="tag-color cyan"> &nbsp;Trainee Android Developer</span>
+                </p>
+              </div>
+              <p>}</p>
+            </div>
+          </div>
+
+          <!-- Trainee  Developer SEDECO -->
+          <div class="bodyFunction padding-bottom-25">
+            <div class="inside-boday-wrapper">
+              <div class="headFunction">
+                <p class="tag-color cyan">public</p>
+                <p class="tag-color cyan">void</p>
+                <p class="tag-color pink">
+                  SEDECO<span class="tag-color white">()</span>
+                </p>
+              </div>
+              <p>{</p>
+
+              <div class="variable-wrapper">
+                <p class="tag-color cyan">var</p>
+                <p class="tag-color white">_Duration</p>
+                <p class="tag-color white">=</p>
+                <p class="tag-color green">
+                  &nbsp;Rage
+                  <span class="tag-color white">( <strong>StartDate</strong>: Mar 2015 ,
+                    <strong>EndDate</strong>: Jun 2016 )</span>
+                </p>
+              </div>
+
+              <div class="variable-wrapper">
+                <p class="tag-color cyan">var</p>
+                <p class="tag-color white">_Title</p>
+                <p class="tag-color white">=</p>
+                <p class="tag-color purple">
+                  <span class="tag-color cyan"> &nbsp;Trainee Software Developer</span>
+                </p>
+              </div>
+              <p>}</p>
+            </div>
+          </div>
+
+          <!-- Trainee  Developer VESL Technologies Ltd -->
+          <div class="bodyFunction padding-bottom-25">
+            <div class="inside-boday-wrapper">
+              <div class="headFunction">
+                <p class="tag-color cyan">public</p>
+                <p class="tag-color cyan">void</p>
+                <p class="tag-color pink">
+                  VESL Technologies Ltd<span class="tag-color white">()</span>
+                </p>
+              </div>
+              <p>{</p>
+
+              <div class="variable-wrapper">
+                <p class="tag-color cyan">var</p>
+                <p class="tag-color white">_Duration</p>
+                <p class="tag-color white">=</p>
+                <p class="tag-color green">
+                  &nbsp;Rage
+                  <span class="tag-color white">( <strong>StartDate</strong>: Apr 2014 ,
+                    <strong>EndDate</strong>: Jun 2014 )</span>
+                </p>
+              </div>
+
+              <div class="variable-wrapper">
+                <p class="tag-color cyan">var</p>
+                <p class="tag-color white">_Title</p>
+                <p class="tag-color white">=</p>
+                <p class="tag-color purple">
+                  <span class="tag-color cyan"> &nbsp;Trainee Software Developer</span>
+                </p>
+              </div>
+              <p>}</p>
+            </div>
+          </div>
+          <p>}</p>
+        </div>
+
+        <!-- Academic Qualifications & Certifications -->
+        <div class="func-wrapper">
+          <div class="headFunction">
+            <p class="tag-color cyan">public</p>
+            <p class="tag-color cyan">Class</p>
+            <p class="tag-color pink">Education()</p>
+          </div>
+          <p>{</p>
+          <!-- UTM -->
+          <div class="bodyFunction padding-bottom-25">
+            <div class="inside-boday-wrapper">
+              <div class="headFunction">
+                <p class="tag-color cyan">public</p>
+                <p class="tag-color cyan">void</p>
+                <p class="tag-color pink">
+                  University of Technology, Mauritius<span class="tag-color white">(<span
+                      class="tag-color cyan">String</span> <span class="tag-color white">_Masters</span>)</span>
+                </p>
+              </div>
+              <p>{</p>
+              <div class="variable-wrapper">
+                <p class="tag-color cyan">var</p>
+                <p class="tag-color white">_Date</p>
+                <p class="tag-color white">=</p>
+                <p class="tag-color purple">Oct 2019</p>
+              </div>
+              <div class="variable-wrapper">
+                <p class="tag-color cyan">var</p>
+                <p class="tag-color white">_Level</p>
+                <p class="tag-color white">=</p>
+                <p class="tag-color purple">MBA in Project Management</p>
+              </div>
+              <p>}</p>
+            </div>
+          </div>
+
+          <!-- UDM -->
+
+          <div class="bodyFunction padding-bottom-25">
+            <div class="inside-boday-wrapper">
+              <div class="headFunction">
+                <p class="tag-color cyan">public</p>
+                <p class="tag-color cyan">void</p>
+                <p class="tag-color pink">
+                  Université des Mascareignes<span class="tag-color white">(<span class="tag-color cyan">String</span>
+                    <span class="tag-color white">_Bachelors</span>)</span>
+                </p>
+              </div>
+              <p>{</p>
+              <div class="variable-wrapper">
+                <p class="tag-color cyan">var</p>
+                <p class="tag-color white">_Date</p>
+                <p class="tag-color white">=</p>
+                <p class="tag-color purple">Oct 2015</p>
+              </div>
+              <div class="variable-wrapper">
+                <p class="tag-color cyan">var</p>
+                <p class="tag-color white">_Level</p>
+                <p class="tag-color white">=</p>
+                <p class="tag-color purple">BSc in Software Engineering and Diplôme d’Université</p>
+              </div>
+              <p>}</p>
+            </div>
+          </div>
+
+
+          <!-- UDM -->
+
+          <div class="bodyFunction padding-bottom-25">
+            <div class="inside-boday-wrapper">
+              <div class="headFunction">
+                <p class="tag-color cyan">public</p>
+                <p class="tag-color cyan">void</p>
+                <p class="tag-color pink">
+                  Université des Mascareignes<span class="tag-color white">()</span>
+                </p>
+              </div>
+              <p>{</p>
+              <div class="variable-wrapper">
+                <p class="tag-color cyan">var</p>
+                <p class="tag-color white">_Date</p>
+                <p class="tag-color white">=</p>
+                <p class="tag-color purple">Oct 2014</p>
+              </div>
+              <div class="variable-wrapper">
+                <p class="tag-color cyan">var</p>
+                <p class="tag-color white">_Level</p>
+                <p class="tag-color white">=</p>
+                <p class="tag-color purple">Diploma/DUST in Software Engineering</p>
+              </div>
+              <p>}</p>
+            </div>
+          </div>
+
+          <!-- PDH -->
+
+          <div class="bodyFunction padding-bottom-25">
+            <div class="inside-boday-wrapper">
+              <div class="headFunction">
+                <p class="tag-color cyan">public</p>
+                <p class="tag-color cyan">void</p>
+                <p class="tag-color pink">
+                  Palmdale High School California USA<span class="tag-color white">()</span>
+                </p>
+              </div>
+              <p>{</p>
+              <div class="variable-wrapper">
+                <p class="tag-color cyan">var</p>
+                <p class="tag-color white">_Date</p>
+                <p class="tag-color white">=</p>
+                <p class="tag-color purple">Jun 2009</p>
+              </div>
+              <div class="variable-wrapper">
+                <p class="tag-color cyan">var</p>
+                <p class="tag-color white">_Level</p>
+                <p class="tag-color white">=</p>
+                <p class="tag-color purple">High School Diploma</p>
+              </div>
+              <p>}</p>
+            </div>
+          </div>
+
+
+          <!-- CJH -->
+
+          <div class="bodyFunction padding-bottom-25">
+            <div class="inside-boday-wrapper">
+              <div class="headFunction">
+                <p class="tag-color cyan">public</p>
+                <p class="tag-color cyan">void</p>
+                <p class="tag-color pink">
+                  Cactus Junior High School California USA<span class="tag-color white">()</span>
+                </p>
+              </div>
+              <p>{</p>
+              <div class="variable-wrapper">
+                <p class="tag-color cyan">var</p>
+                <p class="tag-color white">_Date</p>
+                <p class="tag-color white">=</p>
+                <p class="tag-color purple">Jun 2005</p>
+              </div>
+              <div class="variable-wrapper">
+                <p class="tag-color cyan">var</p>
+                <p class="tag-color white">_Level</p>
+                <p class="tag-color white">=</p>
+                <p class="tag-color purple">Junior High School Diploma</p>
+              </div>
+              <p>}</p>
+            </div>
+          </div>
+          <p>}</p>
+        </div>
+      </div>
+
+      <!-- Professional Mission & Commitment Statement -->
+      <div class="mission-statement-section">
+        <p class="tag-color comment">/*</p>
+        <p class="tag-color comment txt">
+          Committed to driving strategic initiatives, fostering collaborative team environments, and
+          delivering measurable project outcomes that contribute to organizational success.
+        </p>
+        <p class="tag-color comment">*/</p>
+      </div>
+
+      <!-- Copyright & All Rights Reserved -->
+      <div class="copyright-section">
+        <p class="tag-color comment ">© 2026 All Rights Reserved to Leeladharsing Amal Jundoosing</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Mobile Menu Toggle Script -->
+  <script>
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const mainContainer = document.getElementById('main-container');
+    const rightWrapper = document.querySelector('.right-wrapper');
+
+    mobileMenuToggle.addEventListener('click', function () {
+      mobileMenuToggle.classList.toggle('active');
+      mainContainer.classList.toggle('menu-open');
+      rightWrapper.classList.toggle('active');
+    });
+
+    // Close menu when clicking on overlay or a link
+    document.addEventListener('click', function (e) {
+      if (window.innerWidth <= 768) {
+        if (!rightWrapper.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+          if (mainContainer.classList.contains('menu-open')) {
+            mobileMenuToggle.classList.remove('active');
+            mainContainer.classList.remove('menu-open');
+            rightWrapper.classList.remove('active');
+          }
+        }
+      }
+    });
+
+    // Close menu on resize to desktop
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 768) {
+        mobileMenuToggle.classList.remove('active');
+        mainContainer.classList.remove('menu-open');
+        rightWrapper.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+
+</html>
