@@ -61,6 +61,15 @@ body .main-container .right-wrapper .img-wrapper .placeholder-image {
   display: block;
   margin: 0 auto;
 }
+body .main-container .right-wrapper .cv-wrapper {
+  position: relative;
+  width: 100%;
+}
+body .main-container .right-wrapper .cv-wrapper .placeholder-image {
+  width: 130px;
+  display: block;
+  margin: 0 auto;
+}
 body .main-container .left-wrapper {
   position: relative;
   width: 100%;

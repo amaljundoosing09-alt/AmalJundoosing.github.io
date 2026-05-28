@@ -61,6 +61,16 @@ body {
           margin: 0 auto;
         }
       }
+      .cv-wrapper {
+        position: relative;
+        width: 100%;
+
+        .placeholder-image {
+          width: 130px;
+          display: block;
+          margin: 0 auto;
+        }
+      }
     }
 
     .left-wrapper {
