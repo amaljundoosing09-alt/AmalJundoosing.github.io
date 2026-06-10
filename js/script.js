@@ -32,3 +32,40 @@
         document.body.classList.remove('menu-open');
       }
     });
+
+    // ==================== Dark/Light Mode Toggle ====================
+    const themeToggle = document.getElementById('themeToggle');
+    const htmlElement = document.documentElement;
+
+    // Initialize theme from localStorage or system preference
+    function initializeTheme() {
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      applyTheme(savedTheme);
+    }
+
+    // Apply theme to the document
+    function applyTheme(theme) {
+      if (theme === 'light') {
+        document.body.classList.add('light-mode');
+        themeToggle.classList.add('light-mode');
+        themeToggle.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light');
+        themeToggle.setAttribute('aria-label', 'Switch to dark mode');
+      } else {
+        document.body.classList.remove('light-mode');
+        themeToggle.classList.add('dark-mode');
+        themeToggle.classList.remove('light-mode');
+        localStorage.setItem('theme', 'dark');
+        themeToggle.setAttribute('aria-label', 'Switch to light mode');
+      }
+    }
+
+    // Toggle theme
+    themeToggle.addEventListener('click', function () {
+      const currentTheme = localStorage.getItem('theme') || 'dark';
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      applyTheme(newTheme);
+    });
+
+    // Initialize theme on page load
+    initializeTheme();

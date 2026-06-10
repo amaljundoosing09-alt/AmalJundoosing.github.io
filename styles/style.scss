@@ -45,10 +45,21 @@ body {
   background-color: $Background;
   color: $Foreground;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &.light-mode {
+    background-color: $LightBackground;
+    color: $LightForeground;
+  }
 
   ::selection {
     background-color: $SelectionBackground;
     color: $Foreground;
+  }
+
+  &.light-mode ::selection {
+    background-color: $LightSelectionBackground;
+    color: $LightForeground;
   }
 
   .main-container {
@@ -217,6 +228,39 @@ body {
       color: $Comment;
     }
   }
+
+  &.light-mode .tag-color {
+    &.cyan {
+      color: $LightCyan;
+    }
+
+    &.green {
+      color: $LightGreen;
+    }
+
+    &.orange {
+      color: $LightOrange;
+    }
+
+    &.pink {
+      color: $LightPink;
+    }
+
+    &.purple {
+      color: $LightPurple;
+    }
+
+    &.red {
+      color: $LightRed;
+    }
+
+    &.white {
+      color: $LightForeground;
+    }
+    &.comment {
+      color: $LightComment;
+    }
+  }
 }
 
 /* Mobile Menu Toggle Button Styles */
@@ -257,11 +301,96 @@ body {
   }
 }
 
+body.light-mode .mobile-menu-toggle span {
+  background-color: $LightPink;
+}
+
+/* Theme Toggle Button Styles */
+.theme-toggle {
+  display: flex;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1001;
+  background: none;
+  border: 2px solid $Pink;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px $Pink;
+  }
+
+  svg {
+    width: 1.3rem;
+    height: 1.3rem;
+    color: $Pink;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .sun-icon {
+    position: absolute;
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+
+  .moon-icon {
+    position: absolute;
+    opacity: 0;
+    transform: rotate(-180deg);
+  }
+
+  &.dark-mode .sun-icon {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+
+  &.dark-mode .moon-icon {
+    opacity: 0;
+    transform: rotate(-180deg);
+  }
+
+  &.light-mode .sun-icon {
+    opacity: 0;
+    transform: rotate(180deg);
+  }
+
+  &.light-mode .moon-icon {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
+
+body.light-mode .theme-toggle {
+  border-color: $LightPink;
+
+  &:hover {
+    box-shadow: 0 0 10px $LightPink;
+  }
+
+  svg {
+    color: $LightPink;
+  }
+}
+
 /* Mobile Responsive Design */
 @media (max-width: 768px) {
   /* Show hamburger menu on mobile */
   .mobile-menu-toggle {
     display: flex;
+  }
+
+  /* Adjust theme toggle position on mobile */
+  .theme-toggle {
+    top: 1rem;
+    right: 1rem;
   }
 
   body .main-container {
@@ -306,7 +435,7 @@ body {
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: $OverlayBg;
       z-index: 999;
       opacity: 0;
       pointer-events: none;
@@ -316,6 +445,16 @@ body {
     &.menu-open::before {
       opacity: 1;
       pointer-events: auto;
+    }
+  }
+
+  body.light-mode .main-container {
+    .right-wrapper {
+      background-color: $LightBackground;
+    }
+
+    &::before {
+      background-color: $LightOverlayBg;
     }
   }
 
@@ -340,4 +479,8 @@ body {
   font-size: 0.85rem;
   box-sizing: border-box;
   width: 100%;
+}
+
+body.light-mode .copyright-section {
+  border-top: 1px solid $LightBorderColor;
 }

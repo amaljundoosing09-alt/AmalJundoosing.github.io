@@ -1,3 +1,4 @@
+// Dark Mode (Default)
 $Background: #282A36;
 $Foreground: #F8F8F2;
 $SelectionBackground: #44475A;
@@ -9,3 +10,20 @@ $Orange: #FFB86C;
 $Pink: #FF79C6;
 $Purple: #BD93F9;
 $Red: #FF5555;
+$BorderColor: #6272A4;
+$OverlayBg: rgba(0, 0, 0, 0.5);
+
+// Light Mode Colors
+$LightBackground: #FFFFFF;
+$LightForeground: #1A1A1A;
+$LightSelectionBackground: #F0F0F0;
+$LightCurrentLine: #F0F0F0;
+$LightComment: #555555;
+$LightCyan: #0891B2;
+$LightGreen: #059669;
+$LightOrange: #D97706;
+$LightPink: #DB2777;
+$LightPurple: #7C3AED;
+$LightRed: #DC2626;
+$LightBorderColor: #CCCCCC;
+$LightOverlayBg: rgba(0, 0, 0, 0.3);
