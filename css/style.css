@@ -178,6 +178,9 @@ body .func-wrapper .bodyFunction ul li {
   flex-direction: column;
   gap: 4px;
 }
+body .func-wrapper .bodyFunction ul li .view-details {
+  cursor: pointer;
+}
 body .func-wrapper .bodyFunction .mainbody-wrapper {
   display: flex;
   flex-direction: column;
