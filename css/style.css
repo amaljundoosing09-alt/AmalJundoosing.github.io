@@ -135,7 +135,7 @@ body .main-container .left-wrapper .top-header-section {
 body .func-wrapper {
   position: relative;
   width: 100%;
-  gap: 6px;
+  padding-bottom: 20px;
   font-family: "Courier New", Courier, monospace;
   font-size: 0.9rem;
   box-sizing: border-box;
@@ -149,6 +149,7 @@ body .func-wrapper .headFunction {
   flex-direction: row;
   width: 100%;
   gap: 6px;
+  padding-bottom: 6px;
 }
 body .func-wrapper .headFunction p {
   margin-bottom: 5px;
