@@ -94,6 +94,28 @@ body .main-container .right-wrapper .cv-wrapper .placeholder-image {
   display: block;
   margin: 0 auto;
 }
+body .main-container .right-wrapper .social-img-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+body .main-container .right-wrapper .social-img-wrapper a {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+body .main-container .right-wrapper .social-img-wrapper a .social-img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+body .main-container .right-wrapper .social-img-wrapper a:hover {
+  transform: scale(1.2);
+}
 body .main-container .left-wrapper {
   position: relative;
   width: 100%;

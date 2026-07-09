@@ -83,7 +83,8 @@ body {
           margin: 0 auto;
         }
       }
-      .cv-wrapper{
+
+      .cv-wrapper {
         position: relative;
         width: 100%;
 
@@ -91,6 +92,31 @@ body {
           width: 130px;
           display: block;
           margin: 0 auto;
+        }
+      }
+
+      .social-img-wrapper {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        a {
+          display: flex;
+          gap: 10px;
+          margin-bottom: 10px;
+          align-items: center;
+          text-decoration: none;
+          transition: transform 0.3s ease;
+          .social-img {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+           
+          }
+          &:hover {
+            transform: scale(1.2);
+          }
         }
       }
     }
@@ -101,6 +127,7 @@ body {
       flex: 1;
       padding-left: 3.5rem;
       box-sizing: border-box;
+
       .top-header-section {
         position: relative;
         display: flex;
@@ -120,6 +147,7 @@ body {
     font-family: "Courier New", Courier, monospace;
     font-size: 0.9rem;
     box-sizing: border-box;
+
     p {
       margin: 0;
     }
@@ -130,6 +158,7 @@ body {
       flex-direction: row;
       width: 100%;
       gap: 6px;
+
       p {
         margin-bottom: 5px;
       }
@@ -141,6 +170,7 @@ body {
       width: 100%;
       flex-direction: column;
       gap: 6px;
+
       p {
         margin: 0;
       }
@@ -160,12 +190,14 @@ body {
           gap: 4px;
         }
       }
+
       .mainbody-wrapper {
         display: flex;
         flex-direction: column;
         gap: 6px;
         padding-left: 25px;
       }
+
       .variable-wrapper {
         display: flex;
         flex-direction: row;
@@ -181,13 +213,16 @@ body {
       padding-left: 25px;
     }
   }
+
   .mission-statement-section {
     font-family: "Courier New", Courier, monospace;
     margin-top: 3rem;
+
     .txt {
       text-align: center;
     }
   }
+
   .padding-bottom-25 {
     padding-bottom: 25px;
   }
@@ -224,6 +259,7 @@ body {
     &.white {
       color: $Foreground;
     }
+
     &.comment {
       color: $Comment;
     }
@@ -257,6 +293,7 @@ body {
     &.white {
       color: $LightForeground;
     }
+
     &.comment {
       color: $LightComment;
     }
@@ -382,6 +419,7 @@ body.light-mode .theme-toggle {
 
 /* Mobile Responsive Design */
 @media (max-width: 768px) {
+
   /* Show hamburger menu on mobile */
   .mobile-menu-toggle {
     display: flex;
