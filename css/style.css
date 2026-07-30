@@ -303,12 +303,46 @@ body.light-mode .mobile-menu-toggle span {
 }
 
 /* Theme Toggle Button Styles */
-.theme-toggle {
-  display: flex;
+.btn-wrapper {
   position: fixed;
   top: 1rem;
   right: 1rem;
-  z-index: 1001;
+  z-index: 999;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.lang-toggle {
+  display: flex;
+  position: relative;
+  top: auto;
+  right: auto;
+  z-index: auto;
+  background: none;
+  border: 2px solid #FF79C6;
+  border-radius: 999px;
+  cursor: pointer;
+  padding: 0.4rem 0.75rem;
+  align-items: center;
+  justify-content: center;
+  color: #FF79C6;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.lang-toggle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #FF79C6;
+}
+
+.theme-toggle {
+  display: flex;
+  position: relative;
+  top: auto;
+  right: auto;
+  z-index: auto;
   background: none;
   border: 2px solid #FF79C6;
   border-radius: 50%;
@@ -357,6 +391,14 @@ body.light-mode .mobile-menu-toggle span {
   transform: rotate(0deg);
 }
 
+body.light-mode .lang-toggle {
+  border-color: #DB2777;
+  color: #DB2777;
+}
+body.light-mode .lang-toggle:hover {
+  box-shadow: 0 0 10px #DB2777;
+}
+
 body.light-mode .theme-toggle {
   border-color: #DB2777;
 }
@@ -373,10 +415,13 @@ body.light-mode .theme-toggle svg {
   .mobile-menu-toggle {
     display: flex;
   }
-  /* Adjust theme toggle position on mobile */
-  .theme-toggle {
-    top: 1rem;
+  /* Adjust controls position on mobile */
+  .btn-wrapper {
     right: 1rem;
+    z-index: 999;
+  }
+  .lang-toggle {
+    z-index: 998;
   }
   body .main-container {
     flex-direction: column;

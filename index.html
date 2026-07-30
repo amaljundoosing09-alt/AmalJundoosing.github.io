@@ -38,29 +38,35 @@
 
 <body>
   <!-- Mobile Menu Toggle Button -->
-  <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+  <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu" data-i18n-aria="menuLabel">
     <span></span>
     <span></span>
     <span></span>
   </button>
 
   <!-- Dark/Light Mode Toggle Button -->
-  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
-    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <circle cx="12" cy="12" r="5"></circle>
-      <line x1="12" y1="1" x2="12" y2="3"></line>
-      <line x1="12" y1="21" x2="12" y2="23"></line>
-      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-      <line x1="1" y1="12" x2="3" y2="12"></line>
-      <line x1="21" y1="12" x2="23" y2="12"></line>
-      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-    </svg>
-    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-    </svg>
-  </button>
+  <div class="btn-wrapper">
+    <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch to French"
+      title="Switch to French">FR</button>
+
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" data-i18n-aria="themeLabel">
+      <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+      <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+    </button>
+  </div>
+
 
   <main class="main-container" id="main-container">
     <!-- Right Column: Skills, Tools & Personal Info -->
@@ -79,7 +85,7 @@
           <div class="headFunction">
             <p class="tag-color cyan">public</p>
             <p class="tag-color cyan">enum</p>
-            <p class="tag-color pink">PLATFORMES()</p>
+            <p class="tag-color pink" data-i18n="platformsLabel">PLATFORMES()</p>
           </div>
           <div class="bodyFunction">
             <p>{</p>
@@ -98,7 +104,7 @@
           <div class="headFunction">
             <p class="tag-color cyan">public</p>
             <p class="tag-color cyan">enum</p>
-            <p class="tag-color pink">LANGAGES()</p>
+            <p class="tag-color pink" data-i18n="languagesLabel">LANGAGES()</p>
           </div>
           <div class="bodyFunction">
             <p>{</p>
@@ -115,7 +121,7 @@
           <div class="headFunction">
             <p class="tag-color cyan">public</p>
             <p class="tag-color cyan">enum</p>
-            <p class="tag-color pink">TOOLS()</p>
+            <p class="tag-color pink" data-i18n="toolsLabel">TOOLS()</p>
           </div>
           <div class="bodyFunction">
             <p>{</p>
@@ -134,7 +140,7 @@
           <div class="headFunction">
             <p class="tag-color cyan">public</p>
             <p class="tag-color cyan">enum</p>
-            <p class="tag-color pink">PROJECT MANAGEMENT COMPETENCIES()</p>
+            <p class="tag-color pink" data-i18n="projectManagementLabel">PROJECT MANAGEMENT COMPETENCIES()</p>
           </div>
           <div class="bodyFunction">
             <p>{</p>
@@ -154,28 +160,35 @@
           <div class="headFunction">
             <p class="tag-color cyan">public</p>
             <p class="tag-color cyan">enum</p>
-            <p class="tag-color pink">LANGUAGE PROFICIENCY()</p>
+            <p class="tag-color pink" data-i18n="languageProficiencyLabel">LANGUAGE PROFICIENCY()</p>
           </div>
           <div class="bodyFunction">
             <p>{</p>
-            <p class="tag-color comment">// Click each language to explore its level and context</p>
+            <p class="tag-color comment" data-i18n="languageGuideLabel">// Click each language to explore its level and
+              context</p>
             <ul>
               <li class="tag-color white">
                 <details class="view-detail">
-                  <summary><strong>English</strong> = C1 <span class="tag-color comment">// Fluent</span></summary>
-                  <p class="tag-color white">Business communication, presentations, documentation, and collaboration in international environments.</p>
+                  <summary><strong data-i18n="englishLabel">English</strong> = C1 <span class="tag-color comment"
+                      data-i18n="fluentLabel">// Fluent</span></summary>
+                  <p class="tag-color white" data-i18n="englishDescription">Business communication, presentations,
+                    documentation, and collaboration in international environments.</p>
                 </details>
               </li>
               <li class="tag-color white">
                 <details class="view-detail">
-                  <summary><strong>French</strong> = B2 <span class="tag-color comment">// Fluent</span></summary>
-                  <p class="tag-color white">Professional working proficiency for meetings, stakeholder interaction, and day-to-day communication.</p>
+                  <summary><strong data-i18n="frenchLabel">French</strong> = B2 <span class="tag-color comment"
+                      data-i18n="fluentLabel">// Fluent</span></summary>
+                  <p class="tag-color white" data-i18n="frenchDescription">Professional working proficiency for
+                    meetings, stakeholder interaction, and day-to-day communication.</p>
                 </details>
               </li>
               <li class="tag-color white">
                 <details class="view-detail">
-                  <summary><strong>Creole</strong> = B1 <span class="tag-color comment">// Native</span></summary>
-                  <p class="tag-color white">Strong cultural and conversational fluency for community, personal, and informal professional settings.</p>
+                  <summary><strong data-i18n="creoleLabel">Creole</strong> = B1 <span class="tag-color comment"
+                      data-i18n="nativeLabel">// Native</span></summary>
+                  <p class="tag-color white" data-i18n="creoleDescription">Strong cultural and conversational fluency
+                    for community, personal, and informal professional settings.</p>
                 </details>
               </li>
             </ul>
@@ -188,11 +201,11 @@
           <div class="headFunction">
             <p class="tag-color cyan">public</p>
             <p class="tag-color cyan">enum</p>
-            <p class="tag-color pink">STRENGTHS()</p>
+            <p class="tag-color pink" data-i18n="strengthsLabel">STRENGTHS()</p>
           </div>
           <div class="bodyFunction">
             <p>{</p>
-            <p class="mainbody-wrapper tag-color white">
+            <p class="mainbody-wrapper tag-color white" data-i18n="strengthText">
               Leadership & Decision-Making, Stakeholder Communication, Strategic & Analytical Thinking, Multi-Project
               Management, Results-Driven Mindset, Continuous Learning & Growth
             </p>
@@ -200,40 +213,41 @@
           </div>
         </div>
 
-        
+
 
         <!-- my cv -->
         <div class="cv-wrapper">
           <p class="tag-color cyan">&lt;img&gt;</p>
-          <a href="./documents/Leeladharsing_Amal_Jundoosing_CV.pdf" target="_blank" alt="Download my cv size 174KB open in new window">
+          <a href="./documents/Leeladharsing_Amal_Jundoosing_CV.pdf" target="_blank"
+            alt="Download my cv size 174KB open in new window">
             <img src="./img/cv.png" aria-hidden="true" class="placeholder-image" />
           </a>
           <p class="tag-color cyan">&lt;/img&gt;</p>
         </div>
 
 
-      <!-- Custom npm package -->
+        <!-- Custom npm package -->
         <div class="func-wrapper">
           <div class="headFunction">
             <p class="tag-color cyan">public</p>
             <p class="tag-color cyan">enum</p>
-            <p class="tag-color pink">USE NPM TO DOWNLOAD CV()</p>
+            <p class="tag-color pink" data-i18n="npmLabel">USE NPM TO DOWNLOAD CV()</p>
           </div>
           <div class="bodyFunction">
             <p>{</p>
             <div class="mainbody-wrapper tag-color white">
               <p class="tag-color white">
-                <span class="tag-color comment">// Install globally</span>
+                <span class="tag-color comment" data-i18n="installGlobalLabel">// Install globally</span>
               </p>
               <p>
-                <span class="tag-color cyan">$</span> 
+                <span class="tag-color cyan">$</span>
                 <span class="tag-color cyan">npm install -g cv-downloader</span>
               </p>
               <p class="tag-color white" style="margin-top: 8px;">
-                <span class="tag-color comment">// Then run to download PDF</span>
+                <span class="tag-color comment" data-i18n="runDownloadLabel">// Then run to download PDF</span>
               </p>
               <p>
-                <span class="tag-color cyan">$</span> 
+                <span class="tag-color cyan">$</span>
                 <span class="tag-color cyan">cv-downloader</span>
               </p>
             </div>
@@ -246,20 +260,23 @@
           <div class="headFunction">
             <p class="tag-color cyan">public</p>
             <p class="tag-color cyan">enum</p>
-            <p class="tag-color pink">Online platforms()</p>
+            <p class="tag-color pink" data-i18n="onlinePlatformsLabel">Online platforms()</p>
           </div>
           <div class="bodyFunction">
             <p>{</p>
             <div class="social-img-wrapper">
               <div class="mainbody-wrapper">
-                <a href="https://www.linkedin.com/in/amal-jundoosing-3167b8a4?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" alt="LinkedIn profile open in new window">
-                <img src="./img/icon-linkedin.png" aria-hidden="true" class="social-img" alt="Linkedin Logo" /> <p class="tag-color cyan">LinkedIn</p>
-              </a>
-              <a href="https://github.com/amaljundoosing" target="_blank" alt="GitHub profile open in new window">
-                <img src="./img/icon-github.png" aria-hidden="true" class="social-img" alt="GitHub Logo" /> <p class="tag-color cyan">GitHub</p>
-              </a>
+                <a href="https://www.linkedin.com/in/amal-jundoosing-3167b8a4?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
+                  target="_blank" alt="LinkedIn profile open in new window">
+                  <img src="./img/icon-linkedin.png" aria-hidden="true" class="social-img" alt="Linkedin Logo" />
+                  <p class="tag-color cyan">LinkedIn</p>
+                </a>
+                <a href="https://github.com/amaljundoosing" target="_blank" alt="GitHub profile open in new window">
+                  <img src="./img/icon-github.png" aria-hidden="true" class="social-img" alt="GitHub Logo" />
+                  <p class="tag-color cyan">GitHub</p>
+                </a>
               </div>
-              
+
             </div>
             <p>}</p>
           </div>
@@ -269,7 +286,7 @@
           <div class="headFunction">
             <p class="tag-color cyan">public</p>
             <p class="tag-color cyan">enum</p>
-            <p class="tag-color pink">INTERESTS()</p>
+            <p class="tag-color pink" data-i18n="interestsLabel">INTERESTS()</p>
           </div>
           <div class="bodyFunction">
             <p>{</p>
@@ -286,7 +303,7 @@
       <div class="top-header-section">
         <p class="tag-color comment">/*</p>
         <span class="tag-color comment"> &lt;summary&gt;</span>
-        <p class="tag-color comment">
+        <p class="tag-color comment" data-i18n="summary">
           MBA-qualified Project Management professional with expertise in
           Agile delivery, technical leadership, and cross-functional team
           coordination. Experienced in Scrum facilitation, workflow
@@ -303,14 +320,14 @@
           <div class="headFunction">
             <p class="tag-color cyan">public</p>
             <p class="tag-color cyan">Class</p>
-            <p class="tag-color pink">Information()</p>
+            <p class="tag-color pink" data-i18n="infoLabel">Information()</p>
           </div>
           <div class="bodyFunction">
             <p>{</p>
             <div class="variable-wrapper">
               <p class="tag-color cyan">public</p>
               <p class="tag-color cyan">string</p>
-              <p class="tag-color white">Name</p>
+              <p class="tag-color white" data-i18n="contactName">Name</p>
               <p class="tag-color white">=</p>
               <p class="tag-color orange">'Leeladharsing Jundoosing Amal';</p>
             </div>
@@ -318,7 +335,7 @@
             <div class="variable-wrapper">
               <p class="tag-color cyan">public</p>
               <p class="tag-color cyan">string</p>
-              <p class="tag-color white">Phone Number</p>
+              <p class="tag-color white" data-i18n="contactPhone">Phone Number</p>
               <p class="tag-color white">=</p>
               <p class="tag-color orange">'+230 5824-8885';</p>
             </div>
@@ -326,7 +343,7 @@
             <div class="variable-wrapper">
               <p class="tag-color cyan">public</p>
               <p class="tag-color cyan">string</p>
-              <p class="tag-color white">Email</p>
+              <p class="tag-color white" data-i18n="contactEmail">Email</p>
               <p class="tag-color white">=</p>
               <p class="tag-color orange">'jundoosing@gmail.com';</p>
             </div>
@@ -336,7 +353,7 @@
               <p class="tag-color cyan">
                 string <span class="tag-color white">[]</span>
               </p>
-              <p class="tag-color white">Address</p>
+              <p class="tag-color white" data-i18n="contactAddress">Address</p>
               <p class="tag-color white">=</p>
               <p class="tag-color orange">
                 <span class="tag-color white">{</span>'B.Plan Rd,
@@ -352,7 +369,7 @@
           <div class="headFunction">
             <p class="tag-color cyan">public</p>
             <p class="tag-color cyan">Class</p>
-            <p class="tag-color pink">Experience()</p>
+            <p class="tag-color pink" data-i18n="experienceLabel">Experience()</p>
           </div>
           <p>{</p>
           <div class="bodyFunction padding-bottom-25">
@@ -380,8 +397,8 @@
                 <p class="tag-color white">_Title</p>
                 <p class="tag-color white">=</p>
                 <p class="tag-color purple">
-                  <span class="tag-color cyan"> &nbsp;new </span>Accessibility
-                  Consultant
+                  <span class="tag-color cyan"> &nbsp;new </span><span data-i18n="jobIpedisTitle">Accessibility
+                    Consultant</span>
                 </p>
               </div>
               <div class="mainbody-wrapper">
@@ -429,7 +446,8 @@
                 <p class="tag-color white">_Title</p>
                 <p class="tag-color white">=</p>
                 <p class="tag-color purple">
-                  <span class="tag-color cyan"> &nbsp;new </span>Software Developer III
+                  <span class="tag-color cyan"> &nbsp;new </span><span data-i18n="jobDayforceTitle">Software Developer
+                    III</span>
                 </p>
               </div>
 
@@ -478,7 +496,8 @@
                 <p class="tag-color white">_Title</p>
                 <p class="tag-color white">=</p>
                 <p class="tag-color purple">
-                  <span class="tag-color cyan"> &nbsp;new Software Engineer in Test</span>
+                  <span class="tag-color cyan"> &nbsp;new </span><span data-i18n="jobDayforceTestTitle">Software
+                    Engineer in Test</span>
                 </p>
               </div>
 
@@ -526,7 +545,8 @@
                 <p class="tag-color white">_Title</p>
                 <p class="tag-color white">=</p>
                 <p class="tag-color purple">
-                  <span class="tag-color cyan"> &nbsp;new Webmaster / Developer</span>
+                  <span class="tag-color cyan"> &nbsp;new </span><span data-i18n="jobAmbrexTitle">Webmaster /
+                    Developer</span>
                 </p>
               </div>
 
@@ -573,7 +593,7 @@
                 <p class="tag-color white">_Title</p>
                 <p class="tag-color white">=</p>
                 <p class="tag-color purple">
-                  <span class="tag-color cyan"> &nbsp;Tester</span>
+                  <span class="tag-color cyan"> &nbsp;</span><span data-i18n="jobTesterTitle">Tester</span>
                 </p>
               </div>
 
@@ -619,7 +639,8 @@
                 <p class="tag-color white">_Title</p>
                 <p class="tag-color white">=</p>
                 <p class="tag-color purple">
-                  <span class="tag-color cyan"> &nbsp;Front-End Engineer</span>
+                  <span class="tag-color cyan"> &nbsp;</span><span data-i18n="jobProdigiousTitle">Front-End
+                    Engineer</span>
                 </p>
               </div>
 
@@ -666,7 +687,8 @@
                 <p class="tag-color white">_Title</p>
                 <p class="tag-color white">=</p>
                 <p class="tag-color purple">
-                  <span class="tag-color cyan"> &nbsp;Trainee Android Developer</span>
+                  <span class="tag-color cyan"> &nbsp;</span><span data-i18n="jobJiniTitle">Trainee Android
+                    Developer</span>
                 </p>
               </div>
               <p>}</p>
@@ -750,7 +772,7 @@
           <div class="headFunction">
             <p class="tag-color cyan">public</p>
             <p class="tag-color cyan">Class</p>
-            <p class="tag-color pink">Education()</p>
+            <p class="tag-color pink" data-i18n="educationLabel">Education()</p>
           </div>
           <p>{</p>
           <!-- UTM -->
@@ -902,7 +924,7 @@
       <!-- Professional Mission & Commitment Statement -->
       <div class="mission-statement-section">
         <p class="tag-color comment">/*</p>
-        <p class="tag-color comment txt">
+        <p class="tag-color comment txt" data-i18n="mission">
           Committed to driving strategic initiatives, fostering collaborative team environments, and
           delivering measurable project outcomes that contribute to organizational success.
         </p>
@@ -911,7 +933,8 @@
 
       <!-- Copyright & All Rights Reserved -->
       <div class="copyright-section">
-        <p class="tag-color comment ">© 2026 All Rights Reserved to Leeladharsing Amal Jundoosing</p>
+        <p class="tag-color comment" data-i18n="copyright">© 2026 All Rights Reserved to Leeladharsing Amal Jundoosing
+        </p>
       </div>
     </div>
   </main>
