@@ -36,6 +36,7 @@
     // ==================== Dark/Light Mode Toggle ====================
     const themeToggle = document.getElementById('themeToggle');
     const htmlElement = document.documentElement;
+    const socialIcon = document.querySelectorAll('.social-img');
 
     // Initialize theme from localStorage or system preference
     function initializeTheme() {
@@ -49,12 +50,15 @@
         document.body.classList.add('light-mode');
         themeToggle.classList.add('light-mode');
         themeToggle.classList.remove('dark-mode');
+        socialIcon.forEach(icon => icon.classList.remove('dark-mode'));
+
         localStorage.setItem('theme', 'light');
         themeToggle.setAttribute('aria-label', 'Switch to dark mode');
       } else {
         document.body.classList.remove('light-mode');
         themeToggle.classList.add('dark-mode');
         themeToggle.classList.remove('light-mode');
+        socialIcon.forEach(icon => icon.classList.add('dark-mode'));
         localStorage.setItem('theme', 'dark');
         themeToggle.setAttribute('aria-label', 'Switch to light mode');
       }

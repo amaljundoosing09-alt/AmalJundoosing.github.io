@@ -113,6 +113,9 @@ body .main-container .right-wrapper .social-img-wrapper a .social-img {
   height: 30px;
   cursor: pointer;
 }
+body .main-container .right-wrapper .social-img-wrapper a .dark-mode {
+  filter: brightness(0) invert(1);
+}
 body .main-container .right-wrapper .social-img-wrapper a:hover {
   transform: scale(1.2);
 }

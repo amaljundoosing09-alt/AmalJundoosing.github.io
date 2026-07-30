@@ -112,7 +112,9 @@ body {
             width: 30px;
             height: 30px;
             cursor: pointer;
-           
+          }
+          .dark-mode{
+            filter: brightness(0) invert(1);
           }
           &:hover {
             transform: scale(1.2);
