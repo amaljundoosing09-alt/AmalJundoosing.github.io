@@ -87,7 +87,16 @@
         frenchLabel: 'French',
         creoleLabel: 'Creole',
         fluentLabel: '// Fluent',
-        nativeLabel: '// Native'
+        nativeLabel: '// Native',
+        universityUtmLabel: 'University of Technology, Mauritius',
+        utmDegree: 'MBA in Project Management',
+        universityUdmLabel: 'Université des Mascareignes',
+        udmDegree: 'BSc in Software Engineering and Diplôme d’Université',
+        udmDiplomaDegree: 'Diploma/DUST in Software Engineering',
+        pdhLabel: 'Palmdale High School California USA',
+        pdhDegree: 'High School Diploma',
+        cjhLabel: 'Cactus Junior High School California USA',
+        cjhDegree: 'Junior High School Diploma'
       },
       fr: {
         pageTitle: 'Mon portfolio',
@@ -135,7 +144,16 @@
         frenchLabel: 'Français',
         creoleLabel: 'Créole',
         fluentLabel: '// Courant',
-        nativeLabel: '// Langue maternelle'
+        nativeLabel: '// Langue maternelle',
+        universityUtmLabel: 'Université de Technologie, Maurice',
+        utmDegree: 'MBA en gestion de projet',
+        universityUdmLabel: 'Université des Mascareignes',
+        udmDegree: 'BSc en ingénierie logicielle et Diplôme d’Université',
+        udmDiplomaDegree: 'Diplôme/DUST en ingénierie logicielle',
+        pdhLabel: 'Lycée Palmdale Californie États-Unis',
+        pdhDegree: 'Diplôme d’études secondaires',
+        cjhLabel: 'Collège Cactus Californie États-Unis',
+        cjhDegree: 'Diplôme de collège'
       }
     };
 
