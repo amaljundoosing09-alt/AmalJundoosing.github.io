@@ -316,13 +316,39 @@ var drops = [];
 //1 = y co-ordinate of the drop(same for every drop initially)
 for (var x = 0; x < columns; x++) drops[x] = 1;
 
-window.addEventListener("resize", function () {
-  c.height = window.innerHeight;
-  c.width = window.innerWidth;
-  columns = c.width / font_size;
-  drops = [];
-  for (var x = 0; x < columns; x++) drops[x] = 1;
-});
+// window.addEventListener("resize", function () {
+//   c.height = window.innerHeight;
+//   c.width = window.innerWidth;
+//   columns = c.width / font_size;
+//   drops = [];
+//   for (var x = 0; x < columns; x++) drops[x] = 1;
+// });
+
+function resizeCanvas() {
+    c.width = window.innerWidth;
+    c.height = window.visualViewport
+        ? window.visualViewport.height
+        : window.innerHeight;
+
+    columns = Math.floor(c.width / font_size);
+
+    drops = [];
+
+    for (var x = 0; x < columns; x++) {
+        drops[x] = 1;
+    }
+}
+
+// Normal browser resize
+window.addEventListener("resize", resizeCanvas);
+
+// iPhone Safari viewport resize
+if (window.visualViewport) {
+    window.visualViewport.addEventListener("resize", resizeCanvas);
+}
+
+// Initial setup
+resizeCanvas();
 
 //drawing the characters
 function draw() {
