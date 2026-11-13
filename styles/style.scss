@@ -42,13 +42,15 @@ html {
 }
 
 body {
-  background-color: $Background;
+  background-color: transparent;
   color: $Foreground;
   overflow-x: hidden;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 
   &.light-mode {
-    background-color: $LightBackground;
+    background-color: transparent;
     color: $LightForeground;
   }
 
@@ -113,7 +115,7 @@ body {
             height: 30px;
             cursor: pointer;
           }
-          .dark-mode{
+          .dark-mode {
             filter: brightness(0) invert(1);
           }
           &:hover {
@@ -191,7 +193,7 @@ body {
           display: flex;
           flex-direction: column;
           gap: 4px;
-          .view-detail{
+          .view-detail {
             cursor: pointer;
           }
         }
@@ -238,6 +240,8 @@ body {
   }
 
   .tag-color {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+
     &.cyan {
       color: $Cyan;
     }
@@ -272,6 +276,10 @@ body {
   }
 
   &.light-mode .tag-color {
+    text-shadow:
+      0 1px 2px rgba(244, 250, 246, 0.95),
+      0 0 6px rgba(244, 250, 246, 0.75);
+
     &.cyan {
       color: $LightCyan;
     }
@@ -357,7 +365,6 @@ body.light-mode .mobile-menu-toggle span {
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  
 }
 
 .lang-toggle {
@@ -411,7 +418,9 @@ body.light-mode .mobile-menu-toggle span {
     width: 1.3rem;
     height: 1.3rem;
     color: $Pink;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
   }
 
   .sun-icon {
@@ -470,7 +479,6 @@ body.light-mode .theme-toggle {
 
 /* Mobile Responsive Design */
 @media (max-width: 768px) {
-
   /* Show hamburger menu on mobile */
   .mobile-menu-toggle {
     display: flex;
@@ -576,4 +584,19 @@ body.light-mode .theme-toggle {
 
 body.light-mode .copyright-section {
   border-top: 1px solid $LightBorderColor;
+}
+
+#c {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $Background;
+  z-index: -1;
+  pointer-events: none;
+}
+
+body.light-mode #c {
+  background-color: $LightBackground;
 }

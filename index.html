@@ -1,12 +1,14 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="./css/style.min.css" />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,
 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'>
   <defs>
     <linearGradient id='g' x1='0' y1='0' x2='1' y2='1'>
@@ -33,886 +35,1093 @@
         filter='url(%23glow)'>
     AJ
   </text>
-</svg>">
-</head>
+</svg>"
+    />
+  </head>
 
-<body>
-  <!-- Mobile Menu Toggle Button -->
-  <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu" data-i18n-aria="menuLabel">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-
-  <!-- Dark/Light Mode Toggle Button -->
-  <div class="btn-wrapper">
-    <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch to French"
-      title="Switch to French">FR</button>
-
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" data-i18n-aria="themeLabel">
-      <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <circle cx="12" cy="12" r="5"></circle>
-        <line x1="12" y1="1" x2="12" y2="3"></line>
-        <line x1="12" y1="21" x2="12" y2="23"></line>
-        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-        <line x1="1" y1="12" x2="3" y2="12"></line>
-        <line x1="21" y1="12" x2="23" y2="12"></line>
-        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-      </svg>
-      <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-      </svg>
+  <body>
+    <canvas id="c"> </canvas>
+    <!-- Mobile Menu Toggle Button -->
+    <button
+      class="mobile-menu-toggle"
+      id="mobileMenuToggle"
+      aria-label="Toggle menu"
+      data-i18n-aria="menuLabel"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
-  </div>
 
+    <!-- Dark/Light Mode Toggle Button -->
+    <div class="btn-wrapper">
+      <button
+        class="lang-toggle"
+        id="langToggle"
+        type="button"
+        aria-label="Switch to French"
+        title="Switch to French"
+      >
+        FR
+      </button>
 
-  <main class="main-container" id="main-container">
-    <!-- Right Column: Skills, Tools & Personal Info -->
-    <div class="right-wrapper">
-      <!-- Profile Image -->
-      <div class="img-wrapper">
-        <p class="tag-color cyan">&lt;img&gt;</p>
-        <img src="./img/myimg.jpeg" alt="my image" class="placeholder-image" />
-        <p class="tag-color cyan">&lt;/img&gt;</p>
-      </div>
+      <button
+        class="theme-toggle"
+        id="themeToggle"
+        aria-label="Toggle dark/light mode"
+        data-i18n-aria="themeLabel"
+      >
+        <svg
+          class="sun-icon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg
+          class="moon-icon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+    </div>
 
-      <!-- Technical Skills & Competencies -->
-      <div class="platform-wrapper">
-        <!-- Platforms & Operating Systems -->
-        <div class="func-wrapper">
-          <div class="headFunction">
-            <p class="tag-color cyan">public</p>
-            <p class="tag-color cyan">enum</p>
-            <p class="tag-color pink" data-i18n="platformsLabel">PLATFORMES()</p>
-          </div>
-          <div class="bodyFunction">
-            <p>{</p>
-            <ul>
-              <li class="tag-color white">Windows,</li>
-              <li class="tag-color white">Linux,</li>
-              <li class="tag-color white">Mac,</li>
-              <li class="tag-color white">Mobile,</li>
-            </ul>
-            <p>}</p>
-          </div>
-        </div>
-
-        <!-- Programming Languages & Frameworks -->
-        <div class="func-wrapper">
-          <div class="headFunction">
-            <p class="tag-color cyan">public</p>
-            <p class="tag-color cyan">enum</p>
-            <p class="tag-color pink" data-i18n="languagesLabel">LANGAGES()</p>
-          </div>
-          <div class="bodyFunction">
-            <p>{</p>
-            <p class="mainbody-wrapper tag-color white">
-              HTML, CSS, SCSS, JavaScript, TypeScript, React, Node.js, .NET
-              Framework, Express.js, PHP
-            </p>
-            <p>}</p>
-          </div>
-        </div>
-
-        <!-- Development & Design Tools -->
-        <div class="func-wrapper">
-          <div class="headFunction">
-            <p class="tag-color cyan">public</p>
-            <p class="tag-color cyan">enum</p>
-            <p class="tag-color pink" data-i18n="toolsLabel">TOOLS()</p>
-          </div>
-          <div class="bodyFunction">
-            <p>{</p>
-            <p class="mainbody-wrapper tag-color white">
-              Photoshop, Figma, Visual Studio Code, GitHub, Git, CI/CD (GitHub
-              Actions), GitLab, Jira, Confluence, Xray, Postman, MySQL,
-              MongoDB, Docker,CMS Platforms (WordPress, Drupal, Shopify,
-              Salesforce)
-            </p>
-            <p>}</p>
-          </div>
-        </div>
-
-        <!-- Project Management & Delivery Competencies -->
-        <div class="func-wrapper">
-          <div class="headFunction">
-            <p class="tag-color cyan">public</p>
-            <p class="tag-color cyan">enum</p>
-            <p class="tag-color pink" data-i18n="projectManagementLabel">PROJECT MANAGEMENT COMPETENCIES()</p>
-          </div>
-          <div class="bodyFunction">
-            <p>{</p>
-            <p class="mainbody-wrapper tag-color white">
-              Project Management Skills, Project Leadership, Delivery
-              Management, Agile Delivery, Technical Project Leadership ,
-              Program & Delivery Skills, Project & Team Leadership, Delivery &
-              Operations, Agile Project Management, Management Expertise ,
-              Leadership & Delivery, Delivery Excellence
-            </p>
-            <p>}</p>
-          </div>
-        </div>
-
-        <!-- Language Proficiency -->
-        <div class="func-wrapper">
-          <div class="headFunction">
-            <p class="tag-color cyan">public</p>
-            <p class="tag-color cyan">enum</p>
-            <p class="tag-color pink" data-i18n="languageProficiencyLabel">LANGUAGE PROFICIENCY()</p>
-          </div>
-          <div class="bodyFunction">
-            <p>{</p>
-            <p class="tag-color comment" data-i18n="languageGuideLabel">// Click each language to explore its level and
-              context</p>
-            <ul>
-              <li class="tag-color white">
-                <details class="view-detail">
-                  <summary><strong data-i18n="englishLabel">English</strong> = C1 <span class="tag-color comment"
-                      data-i18n="fluentLabel">// Fluent</span></summary>
-                  <p class="tag-color white" data-i18n="englishDescription">Business communication, presentations,
-                    documentation, and collaboration in international environments.</p>
-                </details>
-              </li>
-              <li class="tag-color white">
-                <details class="view-detail">
-                  <summary><strong data-i18n="frenchLabel">French</strong> = B2 <span class="tag-color comment"
-                      data-i18n="fluentLabel">// Fluent</span></summary>
-                  <p class="tag-color white" data-i18n="frenchDescription">Professional working proficiency for
-                    meetings, stakeholder interaction, and day-to-day communication.</p>
-                </details>
-              </li>
-              <li class="tag-color white">
-                <details class="view-detail">
-                  <summary><strong data-i18n="creoleLabel">Creole</strong> = C1 <span class="tag-color comment"
-                      data-i18n="nativeLabel">// Native</span></summary>
-                  <p class="tag-color white" data-i18n="creoleDescription">Strong cultural and conversational fluency
-                    for community, personal, and informal professional settings.</p>
-                </details>
-              </li>
-            </ul>
-            <p>}</p>
-          </div>
-        </div>
-
-        <!-- Core Strengths & Competencies -->
-        <div class="func-wrapper">
-          <div class="headFunction">
-            <p class="tag-color cyan">public</p>
-            <p class="tag-color cyan">enum</p>
-            <p class="tag-color pink" data-i18n="strengthsLabel">STRENGTHS()</p>
-          </div>
-          <div class="bodyFunction">
-            <p>{</p>
-            <p class="mainbody-wrapper tag-color white" data-i18n="strengthText">
-              Leadership & Decision-Making, Stakeholder Communication, Strategic & Analytical Thinking, Multi-Project
-              Management, Results-Driven Mindset, Continuous Learning & Growth
-            </p>
-            <p>}</p>
-          </div>
-        </div>
-
-
-
-        <!-- my cv -->
-        <div class="cv-wrapper">
+    <main class="main-container" id="main-container">
+      <!-- Right Column: Skills, Tools & Personal Info -->
+      <div class="right-wrapper">
+        <!-- Profile Image -->
+        <div class="img-wrapper">
           <p class="tag-color cyan">&lt;img&gt;</p>
-          <a href="./documents/Leeladharsing_Amal_Jundoosing_CV.pdf" target="_blank"
-            alt="Download my cv size 174KB open in new window">
-            <img src="./img/cv.png" aria-hidden="true" class="placeholder-image" />
-          </a>
+          <img
+            src="./img/myimg.jpeg"
+            alt="my image"
+            class="placeholder-image"
+          />
           <p class="tag-color cyan">&lt;/img&gt;</p>
         </div>
 
-
-        <!-- Custom npm package -->
-        <div class="func-wrapper">
-          <div class="headFunction">
-            <p class="tag-color cyan">public</p>
-            <p class="tag-color cyan">enum</p>
-            <p class="tag-color pink" data-i18n="npmLabel">USE NPM TO DOWNLOAD CV()</p>
+        <!-- Technical Skills & Competencies -->
+        <div class="platform-wrapper">
+          <!-- Platforms & Operating Systems -->
+          <div class="func-wrapper">
+            <div class="headFunction">
+              <p class="tag-color cyan">public</p>
+              <p class="tag-color cyan">enum</p>
+              <p class="tag-color pink" data-i18n="platformsLabel">
+                PLATFORMES()
+              </p>
+            </div>
+            <div class="bodyFunction">
+              <p>{</p>
+              <ul>
+                <li class="tag-color white">Windows,</li>
+                <li class="tag-color white">Linux,</li>
+                <li class="tag-color white">Mac,</li>
+                <li class="tag-color white">Mobile,</li>
+              </ul>
+              <p>}</p>
+            </div>
           </div>
-          <div class="bodyFunction">
+
+          <!-- Programming Languages & Frameworks -->
+          <div class="func-wrapper">
+            <div class="headFunction">
+              <p class="tag-color cyan">public</p>
+              <p class="tag-color cyan">enum</p>
+              <p class="tag-color pink" data-i18n="languagesLabel">
+                LANGAGES()
+              </p>
+            </div>
+            <div class="bodyFunction">
+              <p>{</p>
+              <p class="mainbody-wrapper tag-color white">
+                HTML, CSS, SCSS, JavaScript, TypeScript, React, Node.js, .NET
+                Framework, Express.js, PHP
+              </p>
+              <p>}</p>
+            </div>
+          </div>
+
+          <!-- Development & Design Tools -->
+          <div class="func-wrapper">
+            <div class="headFunction">
+              <p class="tag-color cyan">public</p>
+              <p class="tag-color cyan">enum</p>
+              <p class="tag-color pink" data-i18n="toolsLabel">TOOLS()</p>
+            </div>
+            <div class="bodyFunction">
+              <p>{</p>
+              <p class="mainbody-wrapper tag-color white">
+                Photoshop, Figma, Visual Studio Code, GitHub, Git, CI/CD (GitHub
+                Actions), GitLab, Jira, Confluence, Xray, Postman, MySQL,
+                MongoDB, Docker,CMS Platforms (WordPress, Drupal, Shopify,
+                Salesforce)
+              </p>
+              <p>}</p>
+            </div>
+          </div>
+
+          <!-- Project Management & Delivery Competencies -->
+          <div class="func-wrapper">
+            <div class="headFunction">
+              <p class="tag-color cyan">public</p>
+              <p class="tag-color cyan">enum</p>
+              <p class="tag-color pink" data-i18n="projectManagementLabel">
+                PROJECT MANAGEMENT COMPETENCIES()
+              </p>
+            </div>
+            <div class="bodyFunction">
+              <p>{</p>
+              <p class="mainbody-wrapper tag-color white">
+                Project Management Skills, Project Leadership, Delivery
+                Management, Agile Delivery, Technical Project Leadership ,
+                Program & Delivery Skills, Project & Team Leadership, Delivery &
+                Operations, Agile Project Management, Management Expertise ,
+                Leadership & Delivery, Delivery Excellence
+              </p>
+              <p>}</p>
+            </div>
+          </div>
+
+          <!-- Language Proficiency -->
+          <div class="func-wrapper">
+            <div class="headFunction">
+              <p class="tag-color cyan">public</p>
+              <p class="tag-color cyan">enum</p>
+              <p class="tag-color pink" data-i18n="languageProficiencyLabel">
+                LANGUAGE PROFICIENCY()
+              </p>
+            </div>
+            <div class="bodyFunction">
+              <p>{</p>
+              <p class="tag-color comment" data-i18n="languageGuideLabel">
+                // Click each language to explore its level and context
+              </p>
+              <ul>
+                <li class="tag-color white">
+                  <details class="view-detail">
+                    <summary>
+                      <strong data-i18n="englishLabel">English</strong> = C1
+                      <span class="tag-color comment" data-i18n="fluentLabel"
+                        >// Fluent</span
+                      >
+                    </summary>
+                    <p class="tag-color white" data-i18n="englishDescription">
+                      Business communication, presentations, documentation, and
+                      collaboration in international environments.
+                    </p>
+                  </details>
+                </li>
+                <li class="tag-color white">
+                  <details class="view-detail">
+                    <summary>
+                      <strong data-i18n="frenchLabel">French</strong> = B2
+                      <span class="tag-color comment" data-i18n="fluentLabel"
+                        >// Fluent</span
+                      >
+                    </summary>
+                    <p class="tag-color white" data-i18n="frenchDescription">
+                      Professional working proficiency for meetings, stakeholder
+                      interaction, and day-to-day communication.
+                    </p>
+                  </details>
+                </li>
+                <li class="tag-color white">
+                  <details class="view-detail">
+                    <summary>
+                      <strong data-i18n="creoleLabel">Creole</strong> = C1
+                      <span class="tag-color comment" data-i18n="nativeLabel"
+                        >// Native</span
+                      >
+                    </summary>
+                    <p class="tag-color white" data-i18n="creoleDescription">
+                      Strong cultural and conversational fluency for community,
+                      personal, and informal professional settings.
+                    </p>
+                  </details>
+                </li>
+              </ul>
+              <p>}</p>
+            </div>
+          </div>
+
+          <!-- Core Strengths & Competencies -->
+          <div class="func-wrapper">
+            <div class="headFunction">
+              <p class="tag-color cyan">public</p>
+              <p class="tag-color cyan">enum</p>
+              <p class="tag-color pink" data-i18n="strengthsLabel">
+                STRENGTHS()
+              </p>
+            </div>
+            <div class="bodyFunction">
+              <p>{</p>
+              <p
+                class="mainbody-wrapper tag-color white"
+                data-i18n="strengthText"
+              >
+                Leadership & Decision-Making, Stakeholder Communication,
+                Strategic & Analytical Thinking, Multi-Project Management,
+                Results-Driven Mindset, Continuous Learning & Growth
+              </p>
+              <p>}</p>
+            </div>
+          </div>
+
+          <!-- my cv -->
+          <div class="cv-wrapper">
+            <p class="tag-color cyan">&lt;img&gt;</p>
+            <a
+              href="./documents/Leeladharsing_Amal_Jundoosing_CV.pdf"
+              target="_blank"
+              alt="Download my cv size 174KB open in new window"
+            >
+              <img
+                src="./img/cv.png"
+                aria-hidden="true"
+                class="placeholder-image"
+              />
+            </a>
+            <p class="tag-color cyan">&lt;/img&gt;</p>
+          </div>
+
+          <!-- Custom npm package -->
+          <div class="func-wrapper">
+            <div class="headFunction">
+              <p class="tag-color cyan">public</p>
+              <p class="tag-color cyan">enum</p>
+              <p class="tag-color pink" data-i18n="npmLabel">
+                USE NPM TO DOWNLOAD CV()
+              </p>
+            </div>
+            <div class="bodyFunction">
+              <p>{</p>
+              <div class="mainbody-wrapper tag-color white">
+                <p class="tag-color white">
+                  <span class="tag-color comment" data-i18n="installGlobalLabel"
+                    >// Install globally</span
+                  >
+                </p>
+                <p>
+                  <span class="tag-color cyan">$</span>
+                  <span class="tag-color cyan"
+                    >npm install -g cv-downloader</span
+                  >
+                </p>
+                <p class="tag-color white" style="margin-top: 8px">
+                  <span class="tag-color comment" data-i18n="runDownloadLabel"
+                    >// Then run to download PDF</span
+                  >
+                </p>
+                <p>
+                  <span class="tag-color cyan">$</span>
+                  <span class="tag-color cyan">cv-downloader</span>
+                </p>
+              </div>
+              <p>}</p>
+            </div>
+          </div>
+
+          <!-- My Online platforms -->
+          <div class="func-wrapper">
+            <div class="headFunction">
+              <p class="tag-color cyan">public</p>
+              <p class="tag-color cyan">enum</p>
+              <p class="tag-color pink" data-i18n="onlinePlatformsLabel">
+                Online platforms()
+              </p>
+            </div>
+            <div class="bodyFunction">
+              <p>{</p>
+              <div class="social-img-wrapper">
+                <div class="mainbody-wrapper">
+                  <a
+                    href="https://www.linkedin.com/in/amal-jundoosing-3167b8a4?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
+                    target="_blank"
+                    alt="LinkedIn profile open in new window"
+                  >
+                    <img
+                      src="./img/icon-linkedin.png"
+                      aria-hidden="true"
+                      class="social-img"
+                      alt="Linkedin Logo"
+                    />
+                    <p class="tag-color cyan">LinkedIn</p>
+                  </a>
+                  <a
+                    href="https://github.com/amaljundoosing"
+                    target="_blank"
+                    alt="GitHub profile open in new window"
+                  >
+                    <img
+                      src="./img/icon-github.png"
+                      aria-hidden="true"
+                      class="social-img"
+                      alt="GitHub Logo"
+                    />
+                    <p class="tag-color cyan">GitHub</p>
+                  </a>
+                </div>
+              </div>
+              <p>}</p>
+            </div>
+          </div>
+          <!-- Personal Interests & Hobbies -->
+          <div class="func-wrapper">
+            <div class="headFunction">
+              <p class="tag-color cyan">public</p>
+              <p class="tag-color cyan">enum</p>
+              <p class="tag-color pink" data-i18n="interestsLabel">
+                INTERESTS()
+              </p>
+            </div>
+            <div class="bodyFunction">
+              <p>{</p>
+              <p class="mainbody-wrapper tag-color white">
+                Guitar, Basketball, Fishing, Photography, Reading, Traveling
+              </p>
+              <p>}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="left-wrapper">
+        <!-- Professional Summary -->
+        <div class="top-header-section">
+          <p class="tag-color comment">/*</p>
+          <span class="tag-color comment"> &lt;summary&gt;</span>
+          <p class="tag-color comment" data-i18n="summary">
+            MBA-qualified Project Management professional with expertise in
+            Agile delivery, technical leadership, and cross-functional team
+            coordination. Experienced in Scrum facilitation, workflow
+            optimization, risk management, and aligning business goals with
+            engineering execution to deliver efficient and predictable project
+            outcomes.
+          </p>
+          <span class="tag-color comment"> &lt;/summary&gt;</span>
+          <p class="tag-color comment">*/</p>
+        </div>
+        <div class="main-boday-section">
+          <!-- Contact Information -->
+          <div class="func-wrapper padding-bottom-25">
+            <div class="headFunction">
+              <p class="tag-color cyan">public</p>
+              <p class="tag-color cyan">Class</p>
+              <p class="tag-color pink" data-i18n="infoLabel">Information()</p>
+            </div>
+            <div class="bodyFunction">
+              <p>{</p>
+              <div class="variable-wrapper">
+                <p class="tag-color cyan">public</p>
+                <p class="tag-color cyan">string</p>
+                <p class="tag-color white" data-i18n="contactName">Name</p>
+                <p class="tag-color white">=</p>
+                <p class="tag-color orange">'Leeladharsing Jundoosing Amal';</p>
+              </div>
+
+              <div class="variable-wrapper">
+                <p class="tag-color cyan">public</p>
+                <p class="tag-color cyan">string</p>
+                <p class="tag-color white" data-i18n="contactPhone">
+                  Phone Number
+                </p>
+                <p class="tag-color white">=</p>
+                <p class="tag-color orange">'+230 5824-8885';</p>
+              </div>
+
+              <div class="variable-wrapper">
+                <p class="tag-color cyan">public</p>
+                <p class="tag-color cyan">string</p>
+                <p class="tag-color white" data-i18n="contactEmail">Email</p>
+                <p class="tag-color white">=</p>
+                <p class="tag-color orange">'jundoosing@gmail.com';</p>
+              </div>
+
+              <div class="variable-wrapper">
+                <p class="tag-color cyan">public</p>
+                <p class="tag-color cyan">
+                  string <span class="tag-color white">[]</span>
+                </p>
+                <p class="tag-color white" data-i18n="contactAddress">
+                  Address
+                </p>
+                <p class="tag-color white">=</p>
+                <p class="tag-color orange">
+                  <span class="tag-color white">{</span>'B.Plan Rd,
+                  Bougainvilliers Lane, Calebasses'<span class="tag-color white"
+                    >};</span
+                  >
+                </p>
+              </div>
+              <p>}</p>
+            </div>
+          </div>
+
+          <!-- Professional Experience & Employment History -->
+          <div class="func-wrapper padding-bottom-25">
+            <div class="headFunction">
+              <p class="tag-color cyan">public</p>
+              <p class="tag-color cyan">Class</p>
+              <p class="tag-color pink" data-i18n="experienceLabel">
+                Experience()
+              </p>
+            </div>
             <p>{</p>
-            <div class="mainbody-wrapper tag-color white">
-              <p class="tag-color white">
-                <span class="tag-color comment" data-i18n="installGlobalLabel">// Install globally</span>
+            <div class="bodyFunction padding-bottom-25">
+              <div class="inside-boday-wrapper">
+                <div class="headFunction">
+                  <p class="tag-color cyan">public</p>
+                  <p class="tag-color cyan">void</p>
+                  <p class="tag-color pink">
+                    Ipedis<span class="tag-color white">()</span>
+                  </p>
+                </div>
+                <p>{</p>
+                <div class="variable-wrapper">
+                  <p class="tag-color cyan">var</p>
+                  <p class="tag-color white">_Duration</p>
+                  <p class="tag-color white">=</p>
+                  <p class="tag-color green">
+                    &nbsp;Rage
+                    <span class="tag-color white"
+                      >( <strong>StartDate</strong>: Apr 2026 ,
+                      <strong>EndDate</strong>: Current )</span
+                    >
+                  </p>
+                </div>
+                <div class="variable-wrapper">
+                  <p class="tag-color cyan">var</p>
+                  <p class="tag-color white">_Title</p>
+                  <p class="tag-color white">=</p>
+                  <p class="tag-color purple">
+                    <span class="tag-color cyan"> &nbsp;new </span
+                    ><span data-i18n="jobIpedisTitle"
+                      >Accessibility Consultant</span
+                    >
+                  </p>
+                </div>
+                <div class="mainbody-wrapper">
+                  <p class="tag-color comment">/*</p>
+                  <p class="tag-color comment" data-i18n="jobIpedisDescription">
+                    Accessibility professional experienced in leading WCAG
+                    compliance initiatives, conducting accessibility audits, and
+                    improving usability across web applications. Skilled in
+                    accessibility consulting, stakeholder collaboration,
+                    semantic HTML review, keyboard navigation, screen reader
+                    compatibility, and translating business requirements into
+                    inclusive, user-friendly solutions.
+                  </p>
+                  <p class="tag-color comment">*/</p>
+                </div>
+                <p>}</p>
+              </div>
+            </div>
+            <!-- dayforce software developer -->
+            <div class="bodyFunction padding-bottom-25">
+              <div class="inside-boday-wrapper">
+                <div class="headFunction">
+                  <p class="tag-color cyan">public</p>
+                  <p class="tag-color cyan">void</p>
+                  <p class="tag-color pink">
+                    Dayforce<span class="tag-color white">()</span>
+                  </p>
+                </div>
+                <p>{</p>
+
+                <div class="variable-wrapper">
+                  <p class="tag-color cyan">var</p>
+                  <p class="tag-color white">_Duration</p>
+                  <p class="tag-color white">=</p>
+                  <p class="tag-color green">
+                    &nbsp;Rage
+                    <span class="tag-color white"
+                      >( <strong>StartDate</strong>: Nov 2024 ,
+                      <strong>EndDate</strong>: Feb 2026 )</span
+                    >
+                  </p>
+                </div>
+
+                <div class="variable-wrapper">
+                  <p class="tag-color cyan">var</p>
+                  <p class="tag-color white">_Title</p>
+                  <p class="tag-color white">=</p>
+                  <p class="tag-color purple">
+                    <span class="tag-color cyan"> &nbsp;new </span
+                    ><span data-i18n="jobDayforceTitle"
+                      >Software Developer III</span
+                    >
+                  </p>
+                </div>
+
+                <div class="mainbody-wrapper">
+                  <p class="tag-color comment">/*</p>
+                  <p
+                    class="tag-color comment"
+                    data-i18n="jobDayforceDescription"
+                  >
+                    Full-stack developer with experience in building scalable
+                    web applications with HTML, CSS, TypeScript, .NET, and
+                    React.js. Skilled in Agile delivery, Scrum facilitation,
+                    CI/CD automation, backlog refinement, technical risk
+                    management, and cross-functional collaboration. Strong
+                    background in stakeholder communication, accessibility
+                    compliance, workflow optimization, and aligning engineering
+                    execution with business objectives.
+                  </p>
+                  <p class="tag-color comment">*/</p>
+                </div>
+                <p>}</p>
+              </div>
+            </div>
+
+            <!-- dayforce software developer in test -->
+            <div class="bodyFunction padding-bottom-25">
+              <div class="inside-boday-wrapper">
+                <div class="headFunction">
+                  <p class="tag-color cyan">public</p>
+                  <p class="tag-color cyan">void</p>
+                  <p class="tag-color pink">
+                    Dayforce<span class="tag-color white">()</span>
+                  </p>
+                </div>
+                <p>{</p>
+
+                <div class="variable-wrapper">
+                  <p class="tag-color cyan">var</p>
+                  <p class="tag-color white">_Duration</p>
+                  <p class="tag-color white">=</p>
+                  <p class="tag-color green">
+                    &nbsp;Rage
+                    <span class="tag-color white"
+                      >( <strong>StartDate</strong>: Sep 2023 ,
+                      <strong>EndDate</strong>: Nov 2024 )</span
+                    >
+                  </p>
+                </div>
+
+                <div class="variable-wrapper">
+                  <p class="tag-color cyan">var</p>
+                  <p class="tag-color white">_Title</p>
+                  <p class="tag-color white">=</p>
+                  <p class="tag-color purple">
+                    <span class="tag-color cyan"> &nbsp;new </span
+                    ><span data-i18n="jobDayforceTestTitle"
+                      >Software Engineer in Test</span
+                    >
+                  </p>
+                </div>
+
+                <div class="mainbody-wrapper">
+                  <p class="tag-color comment">/*</p>
+                  <p
+                    class="tag-color comment"
+                    data-i18n="jobDayforceTestDescription"
+                  >
+                    QA Automation Engineer with experience in SpecFlow,
+                    FitNesse, and C# (.NET) test automation. Skilled in manual
+                    and automated testing for React-based applications,
+                    collaborating with development teams, and supporting
+                    reliable Agile release cycles.
+                  </p>
+                  <p class="tag-color comment">*/</p>
+                </div>
+                <p>}</p>
+              </div>
+            </div>
+
+            <!-- Ambrex Ltd WebMaster-->
+            <div class="bodyFunction padding-bottom-25">
+              <div class="inside-boday-wrapper">
+                <div class="headFunction">
+                  <p class="tag-color cyan">public</p>
+                  <p class="tag-color cyan">void</p>
+                  <p class="tag-color pink">
+                    Ambrex Ltd<span class="tag-color white">()</span>
+                  </p>
+                </div>
+                <p>{</p>
+
+                <div class="variable-wrapper">
+                  <p class="tag-color cyan">var</p>
+                  <p class="tag-color white">_Duration</p>
+                  <p class="tag-color white">=</p>
+                  <p class="tag-color green">
+                    &nbsp;Rage
+                    <span class="tag-color white"
+                      >( <strong>StartDate</strong>: Jul 2023 ,
+                      <strong>EndDate</strong>: Sep 2023 )</span
+                    >
+                  </p>
+                </div>
+
+                <div class="variable-wrapper">
+                  <p class="tag-color cyan">var</p>
+                  <p class="tag-color white">_Title</p>
+                  <p class="tag-color white">=</p>
+                  <p class="tag-color purple">
+                    <span class="tag-color cyan"> &nbsp;new </span
+                    ><span data-i18n="jobAmbrexTitle"
+                      >Webmaster / Developer</span
+                    >
+                  </p>
+                </div>
+
+                <div class="mainbody-wrapper">
+                  <p class="tag-color comment">/*</p>
+                  <p class="tag-color comment" data-i18n="jobAmbrexDescription">
+                    E-commerce specialist experienced in managing and optimizing
+                    Shopify websites using PageFly. Skilled in
+                    conversion-focused upsell and cross-sell strategies, visual
+                    design, and Adobe Photoshop content optimization.
+                  </p>
+                  <p class="tag-color comment">*/</p>
+                </div>
+                <p>}</p>
+              </div>
+            </div>
+
+            <!-- Total Tester -->
+            <div class="bodyFunction padding-bottom-25">
+              <div class="inside-boday-wrapper">
+                <div class="headFunction">
+                  <p class="tag-color cyan">public</p>
+                  <p class="tag-color cyan">void</p>
+                  <p class="tag-color pink">
+                    Total Energies<span class="tag-color white">()</span>
+                  </p>
+                </div>
+                <p>{</p>
+
+                <div class="variable-wrapper">
+                  <p class="tag-color cyan">var</p>
+                  <p class="tag-color white">_Duration</p>
+                  <p class="tag-color white">=</p>
+                  <p class="tag-color green">
+                    &nbsp;Rage
+                    <span class="tag-color white"
+                      >( <strong>StartDate</strong>: Jan 2023 ,
+                      <strong>EndDate</strong>: Jul 2023 )</span
+                    >
+                  </p>
+                </div>
+
+                <div class="variable-wrapper">
+                  <p class="tag-color cyan">var</p>
+                  <p class="tag-color white">_Title</p>
+                  <p class="tag-color white">=</p>
+                  <p class="tag-color purple">
+                    <span class="tag-color cyan"> &nbsp;</span
+                    ><span data-i18n="jobTesterTitle">Tester</span>
+                  </p>
+                </div>
+
+                <div class="mainbody-wrapper">
+                  <p class="tag-color comment">/*</p>
+                  <p class="tag-color comment" data-i18n="jobTesterDescription">
+                    QA Analyst experienced in manual testing, defect tracking
+                    with Jira Xray, and Agile collaboration. Skilled in user
+                    story refinement, feature validation, and maintaining clear
+                    project documentation in Confluence.
+                  </p>
+                  <p class="tag-color comment">*/</p>
+                </div>
+                <p>}</p>
+              </div>
+            </div>
+
+            <!-- Prodigious Front end Developer -->
+            <div class="bodyFunction padding-bottom-25">
+              <div class="inside-boday-wrapper">
+                <div class="headFunction">
+                  <p class="tag-color cyan">public</p>
+                  <p class="tag-color cyan">void</p>
+                  <p class="tag-color pink">
+                    Prodigious Brand Logistic<span class="tag-color white"
+                      >()</span
+                    >
+                  </p>
+                </div>
+                <p>{</p>
+
+                <div class="variable-wrapper">
+                  <p class="tag-color cyan">var</p>
+                  <p class="tag-color white">_Duration</p>
+                  <p class="tag-color white">=</p>
+                  <p class="tag-color green">
+                    &nbsp;Rage
+                    <span class="tag-color white"
+                      >( <strong>StartDate</strong>: Nov 2016 ,
+                      <strong>EndDate</strong>: Dec 2024 )</span
+                    >
+                  </p>
+                </div>
+
+                <div class="variable-wrapper">
+                  <p class="tag-color cyan">var</p>
+                  <p class="tag-color white">_Title</p>
+                  <p class="tag-color white">=</p>
+                  <p class="tag-color purple">
+                    <span class="tag-color cyan"> &nbsp;</span
+                    ><span data-i18n="jobProdigiousTitle"
+                      >Front-End Engineer</span
+                    >
+                  </p>
+                </div>
+
+                <div class="mainbody-wrapper">
+                  <p class="tag-color comment">/*</p>
+                  <p
+                    class="tag-color comment"
+                    data-i18n="jobProdigiousDescription"
+                  >
+                    Front-End Engineer experienced in building responsive web
+                    applications using HTML, CSS, Sass, JavaScript, React.js,
+                    Node.js, and Tailwind CSS. Skilled in Shopify development,
+                    CMS integrations, SEO optimization, client communication,
+                    and delivering scalable digital solutions across platforms
+                    including WordPress, Drupal, Symfony, Typo3, and Salesforce
+                    Page Designer.
+                  </p>
+                  <p class="tag-color comment">*/</p>
+                </div>
+                <p>}</p>
+              </div>
+            </div>
+
+            <!-- Trainee Android Developer Jini Guru Mauritius -->
+            <div class="bodyFunction padding-bottom-25">
+              <div class="inside-boday-wrapper">
+                <div class="headFunction">
+                  <p class="tag-color cyan">public</p>
+                  <p class="tag-color cyan">void</p>
+                  <p class="tag-color pink">
+                    Jini Guru Mauritius Ltd<span class="tag-color white"
+                      >()</span
+                    >
+                  </p>
+                </div>
+                <p>{</p>
+
+                <div class="variable-wrapper">
+                  <p class="tag-color cyan">var</p>
+                  <p class="tag-color white">_Duration</p>
+                  <p class="tag-color white">=</p>
+                  <p class="tag-color green">
+                    &nbsp;Rage
+                    <span class="tag-color white"
+                      >( <strong>StartDate</strong>: Nov 2015 ,
+                      <strong>EndDate</strong>: Nov 2016 )</span
+                    >
+                  </p>
+                </div>
+
+                <div class="variable-wrapper">
+                  <p class="tag-color cyan">var</p>
+                  <p class="tag-color white">_Title</p>
+                  <p class="tag-color white">=</p>
+                  <p class="tag-color purple">
+                    <span class="tag-color cyan"> &nbsp;</span
+                    ><span data-i18n="jobJiniTitle"
+                      >Trainee Android Developer</span
+                    >
+                  </p>
+                </div>
+                <p>}</p>
+              </div>
+            </div>
+
+            <!-- Trainee  Developer SEDECO -->
+            <div class="bodyFunction padding-bottom-25">
+              <div class="inside-boday-wrapper">
+                <div class="headFunction">
+                  <p class="tag-color cyan">public</p>
+                  <p class="tag-color cyan">void</p>
+                  <p class="tag-color pink">
+                    SEDECO<span class="tag-color white">()</span>
+                  </p>
+                </div>
+                <p>{</p>
+
+                <div class="variable-wrapper">
+                  <p class="tag-color cyan">var</p>
+                  <p class="tag-color white">_Duration</p>
+                  <p class="tag-color white">=</p>
+                  <p class="tag-color green">
+                    &nbsp;Rage
+                    <span class="tag-color white"
+                      >( <strong>StartDate</strong>: Mar 2015 ,
+                      <strong>EndDate</strong>: Jun 2016 )</span
+                    >
+                  </p>
+                </div>
+
+                <div class="variable-wrapper">
+                  <p class="tag-color cyan">var</p>
+                  <p class="tag-color white">_Title</p>
+                  <p class="tag-color white">=</p>
+                  <p class="tag-color purple">
+                    <span class="tag-color cyan">
+                      &nbsp;Trainee Software Developer</span
+                    >
+                  </p>
+                </div>
+                <p>}</p>
+              </div>
+            </div>
+
+            <!-- Trainee  Developer VESL Technologies Ltd -->
+            <div class="bodyFunction padding-bottom-25">
+              <div class="inside-boday-wrapper">
+                <div class="headFunction">
+                  <p class="tag-color cyan">public</p>
+                  <p class="tag-color cyan">void</p>
+                  <p class="tag-color pink">
+                    VESL Technologies Ltd<span class="tag-color white">()</span>
+                  </p>
+                </div>
+                <p>{</p>
+
+                <div class="variable-wrapper">
+                  <p class="tag-color cyan">var</p>
+                  <p class="tag-color white">_Duration</p>
+                  <p class="tag-color white">=</p>
+                  <p class="tag-color green">
+                    &nbsp;Rage
+                    <span class="tag-color white"
+                      >( <strong>StartDate</strong>: Apr 2014 ,
+                      <strong>EndDate</strong>: Jun 2014 )</span
+                    >
+                  </p>
+                </div>
+
+                <div class="variable-wrapper">
+                  <p class="tag-color cyan">var</p>
+                  <p class="tag-color white">_Title</p>
+                  <p class="tag-color white">=</p>
+                  <p class="tag-color purple">
+                    <span class="tag-color cyan">
+                      &nbsp;Trainee Software Developer</span
+                    >
+                  </p>
+                </div>
+                <p>}</p>
+              </div>
+            </div>
+            <p>}</p>
+          </div>
+
+          <!-- Academic Qualifications & Certifications -->
+          <div class="func-wrapper">
+            <div class="headFunction">
+              <p class="tag-color cyan">public</p>
+              <p class="tag-color cyan">Class</p>
+              <p class="tag-color pink" data-i18n="educationLabel">
+                Education()
               </p>
-              <p>
-                <span class="tag-color cyan">$</span>
-                <span class="tag-color cyan">npm install -g cv-downloader</span>
-              </p>
-              <p class="tag-color white" style="margin-top: 8px;">
-                <span class="tag-color comment" data-i18n="runDownloadLabel">// Then run to download PDF</span>
-              </p>
-              <p>
-                <span class="tag-color cyan">$</span>
-                <span class="tag-color cyan">cv-downloader</span>
-              </p>
+            </div>
+            <p>{</p>
+            <!-- UTM -->
+            <div class="bodyFunction padding-bottom-25">
+              <div class="inside-boday-wrapper">
+                <div class="headFunction">
+                  <p class="tag-color cyan">public</p>
+                  <p class="tag-color cyan">void</p>
+                  <p class="tag-color pink">
+                    <span data-i18n="universityUtmLabel"
+                      >University of Technology, Mauritius</span
+                    ><span class="tag-color white"
+                      >(<span class="tag-color cyan">String</span>
+                      <span class="tag-color white">_Masters</span>)</span
+                    >
+                  </p>
+                </div>
+                <p>{</p>
+                <div class="variable-wrapper">
+                  <p class="tag-color cyan">var</p>
+                  <p class="tag-color white">_Date</p>
+                  <p class="tag-color white">=</p>
+                  <p class="tag-color purple">Oct 2019</p>
+                </div>
+                <div class="variable-wrapper">
+                  <p class="tag-color cyan">var</p>
+                  <p class="tag-color white">_Level</p>
+                  <p class="tag-color white">=</p>
+                  <p class="tag-color purple" data-i18n="utmDegree">
+                    MBA in Project Management
+                  </p>
+                </div>
+                <p>}</p>
+              </div>
+            </div>
+
+            <!-- UDM -->
+
+            <div class="bodyFunction padding-bottom-25">
+              <div class="inside-boday-wrapper">
+                <div class="headFunction">
+                  <p class="tag-color cyan">public</p>
+                  <p class="tag-color cyan">void</p>
+                  <p class="tag-color pink">
+                    <span data-i18n="universityUdmLabel"
+                      >Université des Mascareignes</span
+                    ><span class="tag-color white"
+                      >(<span class="tag-color cyan">String</span>
+                      <span class="tag-color white">_Bachelors</span>)</span
+                    >
+                  </p>
+                </div>
+                <p>{</p>
+                <div class="variable-wrapper">
+                  <p class="tag-color cyan">var</p>
+                  <p class="tag-color white">_Date</p>
+                  <p class="tag-color white">=</p>
+                  <p class="tag-color purple">Oct 2015</p>
+                </div>
+                <div class="variable-wrapper">
+                  <p class="tag-color cyan">var</p>
+                  <p class="tag-color white">_Level</p>
+                  <p class="tag-color white">=</p>
+                  <p class="tag-color purple" data-i18n="udmDegree">
+                    BSc in Software Engineering and Diplôme d’Université
+                  </p>
+                </div>
+                <p>}</p>
+              </div>
+            </div>
+
+            <!-- UDM -->
+
+            <div class="bodyFunction padding-bottom-25">
+              <div class="inside-boday-wrapper">
+                <div class="headFunction">
+                  <p class="tag-color cyan">public</p>
+                  <p class="tag-color cyan">void</p>
+                  <p class="tag-color pink">
+                    <span data-i18n="universityUdmLabel"
+                      >Université des Mascareignes</span
+                    ><span class="tag-color white">()</span>
+                  </p>
+                </div>
+                <p>{</p>
+                <div class="variable-wrapper">
+                  <p class="tag-color cyan">var</p>
+                  <p class="tag-color white">_Date</p>
+                  <p class="tag-color white">=</p>
+                  <p class="tag-color purple">Oct 2014</p>
+                </div>
+                <div class="variable-wrapper">
+                  <p class="tag-color cyan">var</p>
+                  <p class="tag-color white">_Level</p>
+                  <p class="tag-color white">=</p>
+                  <p class="tag-color purple" data-i18n="udmDiplomaDegree">
+                    Diploma/DUST in Software Engineering
+                  </p>
+                </div>
+                <p>}</p>
+              </div>
+            </div>
+
+            <!-- PDH -->
+
+            <div class="bodyFunction padding-bottom-25">
+              <div class="inside-boday-wrapper">
+                <div class="headFunction">
+                  <p class="tag-color cyan">public</p>
+                  <p class="tag-color cyan">void</p>
+                  <p class="tag-color pink">
+                    <span data-i18n="pdhLabel"
+                      >Palmdale High School California USA</span
+                    ><span class="tag-color white">()</span>
+                  </p>
+                </div>
+                <p>{</p>
+                <div class="variable-wrapper">
+                  <p class="tag-color cyan">var</p>
+                  <p class="tag-color white">_Date</p>
+                  <p class="tag-color white">=</p>
+                  <p class="tag-color purple">Jun 2009</p>
+                </div>
+                <div class="variable-wrapper">
+                  <p class="tag-color cyan">var</p>
+                  <p class="tag-color white">_Level</p>
+                  <p class="tag-color white">=</p>
+                  <p class="tag-color purple" data-i18n="pdhDegree">
+                    High School Diploma
+                  </p>
+                </div>
+                <p>}</p>
+              </div>
+            </div>
+
+            <!-- CJH -->
+
+            <div class="bodyFunction padding-bottom-25">
+              <div class="inside-boday-wrapper">
+                <div class="headFunction">
+                  <p class="tag-color cyan">public</p>
+                  <p class="tag-color cyan">void</p>
+                  <p class="tag-color pink">
+                    <span data-i18n="cjhLabel"
+                      >Cactus Junior High School California USA</span
+                    ><span class="tag-color white">()</span>
+                  </p>
+                </div>
+                <p>{</p>
+                <div class="variable-wrapper">
+                  <p class="tag-color cyan">var</p>
+                  <p class="tag-color white">_Date</p>
+                  <p class="tag-color white">=</p>
+                  <p class="tag-color purple">Jun 2005</p>
+                </div>
+                <div class="variable-wrapper">
+                  <p class="tag-color cyan">var</p>
+                  <p class="tag-color white">_Level</p>
+                  <p class="tag-color white">=</p>
+                  <p class="tag-color purple" data-i18n="cjhDegree">
+                    Junior High School Diploma
+                  </p>
+                </div>
+                <p>}</p>
+              </div>
             </div>
             <p>}</p>
           </div>
         </div>
 
-        <!-- My Online platforms -->
-        <div class="func-wrapper">
-          <div class="headFunction">
-            <p class="tag-color cyan">public</p>
-            <p class="tag-color cyan">enum</p>
-            <p class="tag-color pink" data-i18n="onlinePlatformsLabel">Online platforms()</p>
-          </div>
-          <div class="bodyFunction">
-            <p>{</p>
-            <div class="social-img-wrapper">
-              <div class="mainbody-wrapper">
-                <a href="https://www.linkedin.com/in/amal-jundoosing-3167b8a4?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
-                  target="_blank" alt="LinkedIn profile open in new window">
-                  <img src="./img/icon-linkedin.png" aria-hidden="true" class="social-img" alt="Linkedin Logo" />
-                  <p class="tag-color cyan">LinkedIn</p>
-                </a>
-                <a href="https://github.com/amaljundoosing" target="_blank" alt="GitHub profile open in new window">
-                  <img src="./img/icon-github.png" aria-hidden="true" class="social-img" alt="GitHub Logo" />
-                  <p class="tag-color cyan">GitHub</p>
-                </a>
-              </div>
-
-            </div>
-            <p>}</p>
-          </div>
-        </div>
-        <!-- Personal Interests & Hobbies -->
-        <div class="func-wrapper">
-          <div class="headFunction">
-            <p class="tag-color cyan">public</p>
-            <p class="tag-color cyan">enum</p>
-            <p class="tag-color pink" data-i18n="interestsLabel">INTERESTS()</p>
-          </div>
-          <div class="bodyFunction">
-            <p>{</p>
-            <p class="mainbody-wrapper tag-color white">
-              Guitar, Basketball, Fishing, Photography, Reading, Traveling
-            </p>
-            <p>}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="left-wrapper">
-      <!-- Professional Summary -->
-      <div class="top-header-section">
-        <p class="tag-color comment">/*</p>
-        <span class="tag-color comment"> &lt;summary&gt;</span>
-        <p class="tag-color comment" data-i18n="summary">
-          MBA-qualified Project Management professional with expertise in
-          Agile delivery, technical leadership, and cross-functional team
-          coordination. Experienced in Scrum facilitation, workflow
-          optimization, risk management, and aligning business goals with
-          engineering execution to deliver efficient and predictable project
-          outcomes.
-        </p>
-        <span class="tag-color comment"> &lt;/summary&gt;</span>
-        <p class="tag-color comment">*/</p>
-      </div>
-      <div class="main-boday-section">
-        <!-- Contact Information -->
-        <div class="func-wrapper padding-bottom-25">
-          <div class="headFunction">
-            <p class="tag-color cyan">public</p>
-            <p class="tag-color cyan">Class</p>
-            <p class="tag-color pink" data-i18n="infoLabel">Information()</p>
-          </div>
-          <div class="bodyFunction">
-            <p>{</p>
-            <div class="variable-wrapper">
-              <p class="tag-color cyan">public</p>
-              <p class="tag-color cyan">string</p>
-              <p class="tag-color white" data-i18n="contactName">Name</p>
-              <p class="tag-color white">=</p>
-              <p class="tag-color orange">'Leeladharsing Jundoosing Amal';</p>
-            </div>
-
-            <div class="variable-wrapper">
-              <p class="tag-color cyan">public</p>
-              <p class="tag-color cyan">string</p>
-              <p class="tag-color white" data-i18n="contactPhone">Phone Number</p>
-              <p class="tag-color white">=</p>
-              <p class="tag-color orange">'+230 5824-8885';</p>
-            </div>
-
-            <div class="variable-wrapper">
-              <p class="tag-color cyan">public</p>
-              <p class="tag-color cyan">string</p>
-              <p class="tag-color white" data-i18n="contactEmail">Email</p>
-              <p class="tag-color white">=</p>
-              <p class="tag-color orange">'jundoosing@gmail.com';</p>
-            </div>
-
-            <div class="variable-wrapper">
-              <p class="tag-color cyan">public</p>
-              <p class="tag-color cyan">
-                string <span class="tag-color white">[]</span>
-              </p>
-              <p class="tag-color white" data-i18n="contactAddress">Address</p>
-              <p class="tag-color white">=</p>
-              <p class="tag-color orange">
-                <span class="tag-color white">{</span>'B.Plan Rd,
-                Bougainvilliers Lane, Calebasses'<span class="tag-color white">};</span>
-              </p>
-            </div>
-            <p>}</p>
-          </div>
+        <!-- Professional Mission & Commitment Statement -->
+        <div class="mission-statement-section">
+          <p class="tag-color comment">/*</p>
+          <p class="tag-color comment txt" data-i18n="mission">
+            Committed to driving strategic initiatives, fostering collaborative
+            team environments, and delivering measurable project outcomes that
+            contribute to organizational success.
+          </p>
+          <p class="tag-color comment">*/</p>
         </div>
 
-        <!-- Professional Experience & Employment History -->
-        <div class="func-wrapper padding-bottom-25">
-          <div class="headFunction">
-            <p class="tag-color cyan">public</p>
-            <p class="tag-color cyan">Class</p>
-            <p class="tag-color pink" data-i18n="experienceLabel">Experience()</p>
-          </div>
-          <p>{</p>
-          <div class="bodyFunction padding-bottom-25">
-            <div class="inside-boday-wrapper">
-              <div class="headFunction">
-                <p class="tag-color cyan">public</p>
-                <p class="tag-color cyan">void</p>
-                <p class="tag-color pink">
-                  Ipedis<span class="tag-color white">()</span>
-                </p>
-              </div>
-              <p>{</p>
-              <div class="variable-wrapper">
-                <p class="tag-color cyan">var</p>
-                <p class="tag-color white">_Duration</p>
-                <p class="tag-color white">=</p>
-                <p class="tag-color green">
-                  &nbsp;Rage
-                  <span class="tag-color white">( <strong>StartDate</strong>: Apr 2026 ,
-                    <strong>EndDate</strong>: Current )</span>
-                </p>
-              </div>
-              <div class="variable-wrapper">
-                <p class="tag-color cyan">var</p>
-                <p class="tag-color white">_Title</p>
-                <p class="tag-color white">=</p>
-                <p class="tag-color purple">
-                  <span class="tag-color cyan"> &nbsp;new </span><span data-i18n="jobIpedisTitle">Accessibility
-                    Consultant</span>
-                </p>
-              </div>
-              <div class="mainbody-wrapper">
-                <p class="tag-color comment">/*</p>
-                <p class="tag-color comment" data-i18n="jobIpedisDescription">
-                  Accessibility professional experienced in leading WCAG compliance initiatives, conducting accessibility audits, and improving usability across web applications. Skilled in accessibility consulting, stakeholder collaboration, semantic HTML review, keyboard navigation, screen reader compatibility, and translating business requirements into inclusive, user-friendly solutions.
-                </p>
-                <p class="tag-color comment">*/</p>
-              </div>
-              <p>}</p>
-            </div>
-          </div>
-          <!-- dayforce software developer -->
-          <div class="bodyFunction padding-bottom-25">
-            <div class="inside-boday-wrapper">
-              <div class="headFunction">
-                <p class="tag-color cyan">public</p>
-                <p class="tag-color cyan">void</p>
-                <p class="tag-color pink">
-                  Dayforce<span class="tag-color white">()</span>
-                </p>
-              </div>
-              <p>{</p>
-
-              <div class="variable-wrapper">
-                <p class="tag-color cyan">var</p>
-                <p class="tag-color white">_Duration</p>
-                <p class="tag-color white">=</p>
-                <p class="tag-color green">
-                  &nbsp;Rage
-                  <span class="tag-color white">( <strong>StartDate</strong>: Nov 2024 ,
-                    <strong>EndDate</strong>: Feb 2026 )</span>
-                </p>
-              </div>
-
-              <div class="variable-wrapper">
-                <p class="tag-color cyan">var</p>
-                <p class="tag-color white">_Title</p>
-                <p class="tag-color white">=</p>
-                <p class="tag-color purple">
-                  <span class="tag-color cyan"> &nbsp;new </span><span data-i18n="jobDayforceTitle">Software Developer
-                    III</span>
-                </p>
-              </div>
-
-              <div class="mainbody-wrapper">
-                <p class="tag-color comment">/*</p>
-                <p class="tag-color comment" data-i18n="jobDayforceDescription">
-                  Full-stack developer with experience in building scalable web applications with HTML, CSS, TypeScript, .NET, and React.js. Skilled in Agile delivery, Scrum facilitation, CI/CD automation, backlog refinement, technical risk management, and cross-functional collaboration. Strong background in stakeholder communication, accessibility compliance, workflow optimization, and aligning engineering execution with business objectives.
-                </p>
-                <p class="tag-color comment">*/</p>
-              </div>
-              <p>}</p>
-            </div>
-          </div>
-
-          <!-- dayforce software developer in test -->
-          <div class="bodyFunction padding-bottom-25">
-            <div class="inside-boday-wrapper">
-              <div class="headFunction">
-                <p class="tag-color cyan">public</p>
-                <p class="tag-color cyan">void</p>
-                <p class="tag-color pink">
-                  Dayforce<span class="tag-color white">()</span>
-                </p>
-              </div>
-              <p>{</p>
-
-              <div class="variable-wrapper">
-                <p class="tag-color cyan">var</p>
-                <p class="tag-color white">_Duration</p>
-                <p class="tag-color white">=</p>
-                <p class="tag-color green">
-                  &nbsp;Rage
-                  <span class="tag-color white">( <strong>StartDate</strong>: Sep 2023 ,
-                    <strong>EndDate</strong>: Nov 2024 )</span>
-                </p>
-              </div>
-
-              <div class="variable-wrapper">
-                <p class="tag-color cyan">var</p>
-                <p class="tag-color white">_Title</p>
-                <p class="tag-color white">=</p>
-                <p class="tag-color purple">
-                  <span class="tag-color cyan"> &nbsp;new </span><span data-i18n="jobDayforceTestTitle">Software
-                    Engineer in Test</span>
-                </p>
-              </div>
-
-              <div class="mainbody-wrapper">
-                <p class="tag-color comment">/*</p>
-                <p class="tag-color comment" data-i18n="jobDayforceTestDescription">
-                  QA Automation Engineer with experience in SpecFlow, FitNesse, and C# (.NET) test automation. Skilled in manual and automated testing for React-based applications, collaborating with development teams, and supporting reliable Agile release cycles.
-                </p>
-                <p class="tag-color comment">*/</p>
-              </div>
-              <p>}</p>
-            </div>
-          </div>
-
-
-          <!-- Ambrex Ltd WebMaster-->
-          <div class="bodyFunction padding-bottom-25">
-            <div class="inside-boday-wrapper">
-              <div class="headFunction">
-                <p class="tag-color cyan">public</p>
-                <p class="tag-color cyan">void</p>
-                <p class="tag-color pink">
-                  Ambrex Ltd<span class="tag-color white">()</span>
-                </p>
-              </div>
-              <p>{</p>
-
-              <div class="variable-wrapper">
-                <p class="tag-color cyan">var</p>
-                <p class="tag-color white">_Duration</p>
-                <p class="tag-color white">=</p>
-                <p class="tag-color green">
-                  &nbsp;Rage
-                  <span class="tag-color white">( <strong>StartDate</strong>: Jul 2023 ,
-                    <strong>EndDate</strong>: Sep 2023 )</span>
-                </p>
-              </div>
-
-              <div class="variable-wrapper">
-                <p class="tag-color cyan">var</p>
-                <p class="tag-color white">_Title</p>
-                <p class="tag-color white">=</p>
-                <p class="tag-color purple">
-                  <span class="tag-color cyan"> &nbsp;new </span><span data-i18n="jobAmbrexTitle">Webmaster /
-                    Developer</span>
-                </p>
-              </div>
-
-              <div class="mainbody-wrapper">
-                <p class="tag-color comment">/*</p>
-                <p class="tag-color comment" data-i18n="jobAmbrexDescription">
-                  E-commerce specialist experienced in managing and optimizing Shopify websites using PageFly. Skilled in conversion-focused upsell and cross-sell strategies, visual design, and Adobe Photoshop content optimization.
-                </p>
-                <p class="tag-color comment">*/</p>
-              </div>
-              <p>}</p>
-            </div>
-          </div>
-
-
-          <!-- Total Tester -->
-          <div class="bodyFunction padding-bottom-25">
-            <div class="inside-boday-wrapper">
-              <div class="headFunction">
-                <p class="tag-color cyan">public</p>
-                <p class="tag-color cyan">void</p>
-                <p class="tag-color pink">
-                  Total Energies<span class="tag-color white">()</span>
-                </p>
-              </div>
-              <p>{</p>
-
-              <div class="variable-wrapper">
-                <p class="tag-color cyan">var</p>
-                <p class="tag-color white">_Duration</p>
-                <p class="tag-color white">=</p>
-                <p class="tag-color green">
-                  &nbsp;Rage
-                  <span class="tag-color white">( <strong>StartDate</strong>: Jan 2023 ,
-                    <strong>EndDate</strong>: Jul 2023 )</span>
-                </p>
-              </div>
-
-              <div class="variable-wrapper">
-                <p class="tag-color cyan">var</p>
-                <p class="tag-color white">_Title</p>
-                <p class="tag-color white">=</p>
-                <p class="tag-color purple">
-                  <span class="tag-color cyan"> &nbsp;</span><span data-i18n="jobTesterTitle">Tester</span>
-                </p>
-              </div>
-
-              <div class="mainbody-wrapper">
-                <p class="tag-color comment">/*</p>
-                <p class="tag-color comment" data-i18n="jobTesterDescription">
-                  QA Analyst experienced in manual testing, defect tracking with Jira Xray, and Agile collaboration. Skilled in user story refinement, feature validation, and maintaining clear project documentation in Confluence.
-                </p>
-                <p class="tag-color comment">*/</p>
-              </div>
-              <p>}</p>
-            </div>
-          </div>
-
-          <!-- Prodigious Front end Developer -->
-          <div class="bodyFunction padding-bottom-25">
-            <div class="inside-boday-wrapper">
-              <div class="headFunction">
-                <p class="tag-color cyan">public</p>
-                <p class="tag-color cyan">void</p>
-                <p class="tag-color pink">
-                  Prodigious Brand Logistic<span class="tag-color white">()</span>
-                </p>
-              </div>
-              <p>{</p>
-
-              <div class="variable-wrapper">
-                <p class="tag-color cyan">var</p>
-                <p class="tag-color white">_Duration</p>
-                <p class="tag-color white">=</p>
-                <p class="tag-color green">
-                  &nbsp;Rage
-                  <span class="tag-color white">( <strong>StartDate</strong>: Nov 2016 ,
-                    <strong>EndDate</strong>: Dec 2024 )</span>
-                </p>
-              </div>
-
-              <div class="variable-wrapper">
-                <p class="tag-color cyan">var</p>
-                <p class="tag-color white">_Title</p>
-                <p class="tag-color white">=</p>
-                <p class="tag-color purple">
-                  <span class="tag-color cyan"> &nbsp;</span><span data-i18n="jobProdigiousTitle">Front-End
-                    Engineer</span>
-                </p>
-              </div>
-
-              <div class="mainbody-wrapper">
-                <p class="tag-color comment">/*</p>
-                <p class="tag-color comment" data-i18n="jobProdigiousDescription">
-                  Front-End Engineer experienced in building responsive web applications using HTML, CSS, Sass, JavaScript, React.js, Node.js, and Tailwind CSS. Skilled in Shopify development, CMS integrations, SEO optimization, client communication, and delivering scalable digital solutions across platforms including WordPress, Drupal, Symfony, Typo3, and Salesforce Page Designer.
-                </p>
-                <p class="tag-color comment">*/</p>
-              </div>
-              <p>}</p>
-            </div>
-          </div>
-
-          <!-- Trainee Android Developer Jini Guru Mauritius -->
-          <div class="bodyFunction padding-bottom-25">
-            <div class="inside-boday-wrapper">
-              <div class="headFunction">
-                <p class="tag-color cyan">public</p>
-                <p class="tag-color cyan">void</p>
-                <p class="tag-color pink">
-                  Jini Guru Mauritius Ltd<span class="tag-color white">()</span>
-                </p>
-              </div>
-              <p>{</p>
-
-              <div class="variable-wrapper">
-                <p class="tag-color cyan">var</p>
-                <p class="tag-color white">_Duration</p>
-                <p class="tag-color white">=</p>
-                <p class="tag-color green">
-                  &nbsp;Rage
-                  <span class="tag-color white">( <strong>StartDate</strong>: Nov 2015 ,
-                    <strong>EndDate</strong>: Nov 2016 )</span>
-                </p>
-              </div>
-
-              <div class="variable-wrapper">
-                <p class="tag-color cyan">var</p>
-                <p class="tag-color white">_Title</p>
-                <p class="tag-color white">=</p>
-                <p class="tag-color purple">
-                  <span class="tag-color cyan"> &nbsp;</span><span data-i18n="jobJiniTitle">Trainee Android
-                    Developer</span>
-                </p>
-              </div>
-              <p>}</p>
-            </div>
-          </div>
-
-          <!-- Trainee  Developer SEDECO -->
-          <div class="bodyFunction padding-bottom-25">
-            <div class="inside-boday-wrapper">
-              <div class="headFunction">
-                <p class="tag-color cyan">public</p>
-                <p class="tag-color cyan">void</p>
-                <p class="tag-color pink">
-                  SEDECO<span class="tag-color white">()</span>
-                </p>
-              </div>
-              <p>{</p>
-
-              <div class="variable-wrapper">
-                <p class="tag-color cyan">var</p>
-                <p class="tag-color white">_Duration</p>
-                <p class="tag-color white">=</p>
-                <p class="tag-color green">
-                  &nbsp;Rage
-                  <span class="tag-color white">( <strong>StartDate</strong>: Mar 2015 ,
-                    <strong>EndDate</strong>: Jun 2016 )</span>
-                </p>
-              </div>
-
-              <div class="variable-wrapper">
-                <p class="tag-color cyan">var</p>
-                <p class="tag-color white">_Title</p>
-                <p class="tag-color white">=</p>
-                <p class="tag-color purple">
-                  <span class="tag-color cyan"> &nbsp;Trainee Software Developer</span>
-                </p>
-              </div>
-              <p>}</p>
-            </div>
-          </div>
-
-          <!-- Trainee  Developer VESL Technologies Ltd -->
-          <div class="bodyFunction padding-bottom-25">
-            <div class="inside-boday-wrapper">
-              <div class="headFunction">
-                <p class="tag-color cyan">public</p>
-                <p class="tag-color cyan">void</p>
-                <p class="tag-color pink">
-                  VESL Technologies Ltd<span class="tag-color white">()</span>
-                </p>
-              </div>
-              <p>{</p>
-
-              <div class="variable-wrapper">
-                <p class="tag-color cyan">var</p>
-                <p class="tag-color white">_Duration</p>
-                <p class="tag-color white">=</p>
-                <p class="tag-color green">
-                  &nbsp;Rage
-                  <span class="tag-color white">( <strong>StartDate</strong>: Apr 2014 ,
-                    <strong>EndDate</strong>: Jun 2014 )</span>
-                </p>
-              </div>
-
-              <div class="variable-wrapper">
-                <p class="tag-color cyan">var</p>
-                <p class="tag-color white">_Title</p>
-                <p class="tag-color white">=</p>
-                <p class="tag-color purple">
-                  <span class="tag-color cyan"> &nbsp;Trainee Software Developer</span>
-                </p>
-              </div>
-              <p>}</p>
-            </div>
-          </div>
-          <p>}</p>
-        </div>
-
-        <!-- Academic Qualifications & Certifications -->
-        <div class="func-wrapper">
-          <div class="headFunction">
-            <p class="tag-color cyan">public</p>
-            <p class="tag-color cyan">Class</p>
-            <p class="tag-color pink" data-i18n="educationLabel">Education()</p>
-          </div>
-          <p>{</p>
-          <!-- UTM -->
-          <div class="bodyFunction padding-bottom-25">
-            <div class="inside-boday-wrapper">
-              <div class="headFunction">
-                <p class="tag-color cyan">public</p>
-                <p class="tag-color cyan">void</p>
-                <p class="tag-color pink">
-                  <span data-i18n="universityUtmLabel">University of Technology, Mauritius</span><span class="tag-color white">(<span
-                      class="tag-color cyan">String</span> <span class="tag-color white">_Masters</span>)</span>
-                </p>
-              </div>
-              <p>{</p>
-              <div class="variable-wrapper">
-                <p class="tag-color cyan">var</p>
-                <p class="tag-color white">_Date</p>
-                <p class="tag-color white">=</p>
-                <p class="tag-color purple">Oct 2019</p>
-              </div>
-              <div class="variable-wrapper">
-                <p class="tag-color cyan">var</p>
-                <p class="tag-color white">_Level</p>
-                <p class="tag-color white">=</p>
-                <p class="tag-color purple" data-i18n="utmDegree">MBA in Project Management</p>
-              </div>
-              <p>}</p>
-            </div>
-          </div>
-
-          <!-- UDM -->
-
-          <div class="bodyFunction padding-bottom-25">
-            <div class="inside-boday-wrapper">
-              <div class="headFunction">
-                <p class="tag-color cyan">public</p>
-                <p class="tag-color cyan">void</p>
-                <p class="tag-color pink">
-                  <span data-i18n="universityUdmLabel">Université des Mascareignes</span><span class="tag-color white">(<span class="tag-color cyan">String</span>
-                    <span class="tag-color white">_Bachelors</span>)</span>
-                </p>
-              </div>
-              <p>{</p>
-              <div class="variable-wrapper">
-                <p class="tag-color cyan">var</p>
-                <p class="tag-color white">_Date</p>
-                <p class="tag-color white">=</p>
-                <p class="tag-color purple">Oct 2015</p>
-              </div>
-              <div class="variable-wrapper">
-                <p class="tag-color cyan">var</p>
-                <p class="tag-color white">_Level</p>
-                <p class="tag-color white">=</p>
-                <p class="tag-color purple" data-i18n="udmDegree">BSc in Software Engineering and Diplôme d’Université</p>
-              </div>
-              <p>}</p>
-            </div>
-          </div>
-
-
-          <!-- UDM -->
-
-          <div class="bodyFunction padding-bottom-25">
-            <div class="inside-boday-wrapper">
-              <div class="headFunction">
-                <p class="tag-color cyan">public</p>
-                <p class="tag-color cyan">void</p>
-                <p class="tag-color pink">
-                  <span data-i18n="universityUdmLabel">Université des Mascareignes</span><span class="tag-color white">()</span>
-                </p>
-              </div>
-              <p>{</p>
-              <div class="variable-wrapper">
-                <p class="tag-color cyan">var</p>
-                <p class="tag-color white">_Date</p>
-                <p class="tag-color white">=</p>
-                <p class="tag-color purple">Oct 2014</p>
-              </div>
-              <div class="variable-wrapper">
-                <p class="tag-color cyan">var</p>
-                <p class="tag-color white">_Level</p>
-                <p class="tag-color white">=</p>
-                <p class="tag-color purple" data-i18n="udmDiplomaDegree">Diploma/DUST in Software Engineering</p>
-              </div>
-              <p>}</p>
-            </div>
-          </div>
-
-          <!-- PDH -->
-
-          <div class="bodyFunction padding-bottom-25">
-            <div class="inside-boday-wrapper">
-              <div class="headFunction">
-                <p class="tag-color cyan">public</p>
-                <p class="tag-color cyan">void</p>
-                <p class="tag-color pink">
-                  <span data-i18n="pdhLabel">Palmdale High School California USA</span><span class="tag-color white">()</span>
-                </p>
-              </div>
-              <p>{</p>
-              <div class="variable-wrapper">
-                <p class="tag-color cyan">var</p>
-                <p class="tag-color white">_Date</p>
-                <p class="tag-color white">=</p>
-                <p class="tag-color purple">Jun 2009</p>
-              </div>
-              <div class="variable-wrapper">
-                <p class="tag-color cyan">var</p>
-                <p class="tag-color white">_Level</p>
-                <p class="tag-color white">=</p>
-                <p class="tag-color purple" data-i18n="pdhDegree">High School Diploma</p>
-              </div>
-              <p>}</p>
-            </div>
-          </div>
-
-
-          <!-- CJH -->
-
-          <div class="bodyFunction padding-bottom-25">
-            <div class="inside-boday-wrapper">
-              <div class="headFunction">
-                <p class="tag-color cyan">public</p>
-                <p class="tag-color cyan">void</p>
-                <p class="tag-color pink">
-                  <span data-i18n="cjhLabel">Cactus Junior High School California USA</span><span class="tag-color white">()</span>
-                </p>
-              </div>
-              <p>{</p>
-              <div class="variable-wrapper">
-                <p class="tag-color cyan">var</p>
-                <p class="tag-color white">_Date</p>
-                <p class="tag-color white">=</p>
-                <p class="tag-color purple">Jun 2005</p>
-              </div>
-              <div class="variable-wrapper">
-                <p class="tag-color cyan">var</p>
-                <p class="tag-color white">_Level</p>
-                <p class="tag-color white">=</p>
-                <p class="tag-color purple" data-i18n="cjhDegree">Junior High School Diploma</p>
-              </div>
-              <p>}</p>
-            </div>
-          </div>
-          <p>}</p>
+        <!-- Copyright & All Rights Reserved -->
+        <div class="copyright-section">
+          <p class="tag-color comment" data-i18n="copyright">
+            © 2026 All Rights Reserved to Leeladharsing Amal Jundoosing
+          </p>
         </div>
       </div>
-
-      <!-- Professional Mission & Commitment Statement -->
-      <div class="mission-statement-section">
-        <p class="tag-color comment">/*</p>
-        <p class="tag-color comment txt" data-i18n="mission">
-          Committed to driving strategic initiatives, fostering collaborative team environments, and
-          delivering measurable project outcomes that contribute to organizational success.
-        </p>
-        <p class="tag-color comment">*/</p>
-      </div>
-
-      <!-- Copyright & All Rights Reserved -->
-      <div class="copyright-section">
-        <p class="tag-color comment" data-i18n="copyright">© 2026 All Rights Reserved to Leeladharsing Amal Jundoosing
-        </p>
-      </div>
-    </div>
-  </main>
-  <!-- Mobile Menu Toggle Script -->
-  <script src="js/script.js"></script>
-</body>
-
+    </main>
+    <!-- Mobile Menu Toggle Script -->
+    <script src="js/script.js"></script>
+  </body>
 </html>
